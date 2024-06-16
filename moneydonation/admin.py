@@ -5,4 +5,4 @@ from .models import UploadMedia
 
 @admin.register(UploadMedia)
 class UploadmediaAdmin(admin.ModelAdmin):
-    list_display = ('upload_user', 'img', 'img_bio', 'uploaded_at', 'updated_at')
+    list_display = ('upload_user', 'img','images', 'img_bio', 'uploaded_at', 'updated_at')
