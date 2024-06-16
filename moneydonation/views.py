@@ -29,15 +29,8 @@ class health_api(APIView):
             return Response({'msg': 'API server is not working'}, status=status.HTTP_400_BAD_REQUEST)
 
 
-class LoginView(APIView):
-    def post(self, request):
-        # Your authentication logic here
-        user = authenticate(username=request.data['username'], password=request.data['password'])
-        if user:
-            token, created = Token.objects.get_or_create(user=user)
-            return Response({'token': token.key})
-        else:
-            return Response({'error': 'Invalid credentials'}, status=401)
+
+
 
         
 class UploadImgGallery(APIView):
