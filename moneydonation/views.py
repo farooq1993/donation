@@ -6,19 +6,19 @@ import logging
 # Create your views here.
 
 
-    
-def index(request):
-    try:
-        return render(request, 'index.html')
-    except:
-        return HttpResponse("Some issue in Server")
-
 def LoginView(request):
-    pass
+    return render (request, 'login.html')
 
-@login_required(login_url='Loginview')
+#@login_required(login_url='/login')   
+def index(request):
+    #try:
+    return render(request, 'index.html')
+    # except:
+    #     return HttpResponse({'msg':'server is upgrading'})
+
+#@login_required(login_url='/login')
 def UploadImgGallery(request):
-    pass
+    return render(request, 'upload_gallery.html')
 
 
 
