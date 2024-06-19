@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load static %}
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +8,15 @@
     <title>Stexo - Responsive Admin & Dashboard Template | Themesdesign</title>
     <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
     <meta content="Themesdesign" name="author" />
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
 
     <!--Morris Chart CSS -->
-    <link rel="stylesheet" href="../plugins/morris/morris.css">
+    <link rel="stylesheet" href="{% static 'morris/morris.css' %}">
 
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/metismenu.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -46,14 +46,14 @@
                     <!-- language-->
                     <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
                         <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="assets/images/flags/us_flag.jpg" class="mr-2" height="12" alt="" /> English <span class="mdi mdi-chevron-down"></span>
+                            <img src="{% static 'images/flags/us_flag.jpg' %}" class="mr-2" height="12" alt="" /> English <span class="mdi mdi-chevron-down"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated language-switch">
-                            <a class="dropdown-item" href="#"><img src="assets/images/flags/french_flag.jpg" alt="" height="16" /><span> French </span></a>
-                            <a class="dropdown-item" href="#"><img src="assets/images/flags/spain_flag.jpg" alt="" height="16" /><span> Spanish </span></a>
-                            <a class="dropdown-item" href="#"><img src="assets/images/flags/russia_flag.jpg" alt="" height="16" /><span> Russian </span></a>
-                            <a class="dropdown-item" href="#"><img src="assets/images/flags/germany_flag.jpg" alt="" height="16" /><span> German </span></a>
-                            <a class="dropdown-item" href="#"><img src="assets/images/flags/italy_flag.jpg" alt="" height="16" /><span> Italian </span></a>
+                            <a class="dropdown-item" href="#"><img src="{% static 'images/flags/french_flag.jpg' %}" alt="" height="16" /><span> French </span></a>
+                            <a class="dropdown-item" href="#"><img src="{% static 'images/flags/spain_flag.jpg' %}" alt="" height="16" /><span> Spanish </span></a>
+                            <a class="dropdown-item" href="#"><img src="{% static 'images/flags/russia_flag.jpg' %}" alt="" height="16" /><span> Russian </span></a>
+                            <a class="dropdown-item" href="#"><img src="{% static 'images/flags/germany_flag.jpg' %}" alt="" height="16" /><span> German </span></a>
+                            <a class="dropdown-item" href="#"><img src="{% static 'images/flags/italy_flag.jpg' %}" alt="" height="16" /><span> Italian </span></a>
                         </div>
                     </li>
 
@@ -117,7 +117,7 @@
                     <li class="dropdown notification-list list-inline-item">
                         <div class="dropdown notification-list nav-pro-img">
                             <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="assets/images/users/user-4.jpg" alt="user" class="rounded-circle">
+                                <img src="{% static 'images/users/user-4.jpg' %}" alt="user" class="rounded-circle">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <!-- item-->
@@ -454,7 +454,7 @@
                                         <a href="#" class="friends-suggestions-list">
                                             <div class="border-bottom position-relative">
                                                 <div class="float-left mb-0 mr-3">
-                                                    <img src="assets/images/users/user-2.jpg" alt="" class="rounded-circle thumb-md">
+                                                    <img src="{% static 'images/users/user-2.jpg' %}" alt="" class="rounded-circle thumb-md">
                                                 </div>
                                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                                     <i class="mdi mdi-plus"></i>
@@ -470,7 +470,7 @@
                                         <a href="#" class="friends-suggestions-list">
                                             <div class="border-bottom position-relative">
                                                 <div class="float-left mb-0 mr-3">
-                                                    <img src="assets/images/users/user-3.jpg" alt="" class="rounded-circle thumb-md">
+                                                    <img src="{% static 'images/users/user-3.jpg' %}" alt="" class="rounded-circle thumb-md">
                                                 </div>
                                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                                     <i class="mdi mdi-plus"></i>
@@ -486,7 +486,7 @@
                                         <a href="#" class="friends-suggestions-list">
                                             <div class="border-bottom position-relative">
                                                 <div class="float-left mb-0 mr-3">
-                                                    <img src="assets/images/users/user-4.jpg" alt="" class="rounded-circle thumb-md">
+                                                    <img src="{% static 'images/users/user-4.jpg' %}" alt="" class="rounded-circle thumb-md">
                                                 </div>
                                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                                     <i class="mdi mdi-plus"></i>
@@ -502,7 +502,7 @@
                                         <a href="#" class="friends-suggestions-list">
                                             <div class="border-bottom position-relative">
                                                 <div class="float-left mb-0 mr-3">
-                                                    <img src="assets/images/users/user-5.jpg" alt="" class="rounded-circle thumb-md">
+                                                    <img src="{% static 'images/users/user-5.jpg' %}" alt="" class="rounded-circle thumb-md">
                                                 </div>
                                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                                     <i class="mdi mdi-plus"></i>
@@ -518,7 +518,7 @@
                                         <a href="#" class="friends-suggestions-list">
                                             <div class="position-relative">
                                                 <div class="float-left mb-0 mr-3">
-                                                    <img src="assets/images/users/user-6.jpg" alt="" class="rounded-circle thumb-md">
+                                                    <img src="{% static 'images/users/user-6.jpg' %}" alt="" class="rounded-circle thumb-md">
                                                 </div>
                                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                                     <i class="mdi mdi-plus"></i>
@@ -605,7 +605,7 @@
                                                     <td>$9,420,000</td>
                                                     <td>
                                                         <div>
-                                                            <img src="assets/images/users/user-2.jpg" alt="" class="thumb-md rounded-circle mr-2"> Philip Smead
+                                                            <img src="{% static 'images/users/user-2.jpg' %}" alt="" class="thumb-md rounded-circle mr-2"> Philip Smead
                                                         </div>
                                                     </td>
                                                     <td>Houston, TX 77074</td>
@@ -623,7 +623,7 @@
                                                     <td>$3,120,000</td>
                                                     <td>
                                                         <div>
-                                                            <img src="assets/images/users/user-3.jpg" alt="" class="thumb-md rounded-circle mr-2"> Brent Shipley
+                                                            <img src="{% static 'images/users/user-3.jpg' %}" alt="" class="thumb-md rounded-circle mr-2"> Brent Shipley
                                                         </div>
                                                     </td>
                                                     <td>Oakland, CA 94612</td>
@@ -641,7 +641,7 @@
                                                     <td>$6,360,000</td>
                                                     <td>
                                                         <div>
-                                                            <img src="assets/images/users/user-4.jpg" alt="" class="thumb-md rounded-circle mr-2"> Robert Sitton
+                                                            <img src="{% static 'images/users/user-4.jpg' %}" alt="" class="thumb-md rounded-circle mr-2"> Robert Sitton
                                                         </div>
                                                     </td>
                                                     <td>Hebron, ME 04238</td>
@@ -659,7 +659,7 @@
                                                     <td>$5,200,000</td>
                                                     <td>
                                                         <div>
-                                                            <img src="assets/images/users/user-5.jpg" alt="" class="thumb-md rounded-circle mr-2"> Alberto Jackson
+                                                            <img src="{% static 'images/users/user-5.jpg' %}" alt="" class="thumb-md rounded-circle mr-2"> Alberto Jackson
                                                         </div>
                                                     </td>
                                                     <td>Salinas, CA 93901</td>
@@ -677,7 +677,7 @@
                                                     <td>$7,250,000</td>
                                                     <td>
                                                         <div>
-                                                            <img src="assets/images/users/user-6.jpg" alt="" class="thumb-md rounded-circle mr-2"> David Sanchez
+                                                            <img src="{% static 'images/users/user-6.jpg' %}" alt="" class="thumb-md rounded-circle mr-2"> David Sanchez
                                                         </div>
                                                     </td>
                                                     <td>Cincinnati, OH 45202</td>
@@ -719,20 +719,20 @@
     <!-- END wrapper -->
 
     <!-- jQuery  -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/metismenu.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/waves.min.js"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/metismenu.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slimscroll.js' %}"></script>
+    <script src="{% static 'js/waves.min.js' %}"></script>
 
     <!--Morris Chart-->
-    <script src="../plugins/morris/morris.min.js"></script>
-    <script src="../plugins/raphael/raphael.min.js"></script>
+    <script src="{% static 'morris/morris.min.js' %}"></script>
+    <script src="{% static 'raphael/raphael.min.js' %}"></script>
 
-    <script src="assets/pages/dashboard.init.js"></script>
+    <script src="{% static 'pages/dashboard.init.js' %}"></script>
 
     <!-- App js -->
-    <script src="assets/js/app.js"></script>
+    <script src="{% static 'js/app.js' %}"></script>
 
 </body>
 
