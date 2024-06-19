@@ -7,17 +7,17 @@
     <title>Gallery</title>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="row mt-5">
         <h2 class="text-primary">Uploaded Gallery</h2>
         {% for item in data %}
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card mb-4">
                     <div class="card-body">
                         <p>{{ item.img_bio }}</p>
-                        <div class="row">
+                        <div class="col-md-3">
                             {% if item.images %}
                                 {% for image_path in item.images %}
-                                    <div class="col-md-6 mb-2">
+                                    <div class="">
                                         <img src="{{ image_path }}" class="img-fluid" alt="Uploaded Image">
                                     </div>
                                 {% endfor %}

@@ -14,7 +14,6 @@ def LoginView(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-        print("user", username, password)
 
         user = authenticate(request, username=username, password=password)
         if user is not None:
@@ -22,7 +21,7 @@ def LoginView(request):
             return redirect('index')
     return render (request, 'login.html')
 
-#@login_required(login_url='/login')   
+@login_required(login_url='/login')   
 def index(request):
     try:
         return render(request, 'index.html')
