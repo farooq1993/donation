@@ -1,739 +1,1919 @@
-<!DOCTYPE html>
-<html lang="en">
+{% include 'header.html' %}
 {% load static %}
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>Stexo - Responsive Admin & Dashboard Template | Themesdesign</title>
-    <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
-    <meta content="Themesdesign" name="author" />
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
-
-    <!--Morris Chart CSS -->
-    <link rel="stylesheet" href="{% static 'morris/morris.css' %}">
-
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/metismenu.min.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/icons.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
-
-</head>
-
-<body>
-
-    <!-- Begin page -->
-    <div id="wrapper">
-
-        <!-- Top Bar Start -->
-        <div class="topbar">
-
-            <!-- LOGO -->
-            <div class="topbar-left">
-                <a href="index.html" class="logo">
-                    <span class="logo-light">
-                            <i class="mdi mdi-camera-control"></i> Stexo
-                        </span>
-                    <span class="logo-sm">
-                            <i class="mdi mdi-camera-control"></i>
-                        </span>
+  
+  <body>
+    <!-- <?php require_once( 'includes/nav.php'); ?> -->
+    {% include 'nav.html' %}
+      <!-- Section Banner -->
+      <section class="bg-9 mx-2 section-banner">
+        <div class="container-fluid ps-lg-5">
+          <div class="row align-items-center">
+            <div class="col-lg-5 col-md-12 py-5 pe-lg-5 order-lg-1 order-2">
+              <div class="text-lg-start text-center">
+                <h5>
+                  Your donation is eligible for
+                  <strong>
+                    Tax Exemption
+                  </strong>
+                  <span class="badge bg-1 text-black rounded-pill">
+                    80G
+                  </span>
+                </h5>
+                <h2 class="ff-antom display-4 pt-1">
+                  Saving Sacred Cows
+                </h2>
+                <div class="pt-2">
+                  <a href="#" class="cm-btn bg-1 text-black">
+                    <img src="{% static 'images/cow.svg' %}" width="30" alt="">
+                    Donate Now
+                  </a>
+                  <a href="#" class="fw-bold text-decoration-underline ps-md-3 link d-md-inline d-block mt-md-0 mt-3">
+                    Get Involved
+                  </a>
+                </div>
+              </div>
+              <div class="row mt-2 g-4">
+                <div class="col-lg-6 col-md-6">
+                  <div class="card-box">
+                    <div class="row align-items-center">
+                      <div class="col-5">
+                        <img src="{% static 'images/home/icon-01.png'  %}' }" class="img-fluid" alt="">
+                      </div>
+                      <div class="col-7 ps-0 text-end">
+                        <h3 class="fw-bold color-10 mb-0">
+                          18000+
+                        </h3>
+                        <p class="mb-0 fw-semibold color-10">
+                          Stray & Abandoned Cows
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="card-box">
+                    <div class="row align-items-center">
+                      <div class="col-5">
+                        <img src="{% static 'images/home/icon-02.png'  %}' %}" class="img-fluid" alt="">
+                      </div>
+                      <div class="col-7 ps-0 text-end">
+                        <h3 class="fw-bold color-10 mb-0">
+                          84815+
+                        </h3>
+                        <p class="mb-0 fw-semibold color-10">
+                          Surgeries Done
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="card-box">
+                    <div class="row align-items-center">
+                      <div class="col-5">
+                        <img src="{% static 'images/home/icon-03.png'  %}' %}" class="img-fluid" alt="">
+                      </div>
+                      <div class="col-7 ps-0 text-end">
+                        <h3 class="fw-bold color-10 mb-0">
+                          52+
+                        </h3>
+                        <p class="mb-0 fw-semibold color-10">
+                          Cow Sheds
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="card-box">
+                    <div class="row align-items-center">
+                      <div class="col-5">
+                        <img src="{% static 'images/home/icon-04.png'  %}' %}" class="img-fluid" alt="">
+                      </div>
+                      <div class="col-7 ps-0 text-end">
+                        <h3 class="fw-bold color-10 mb-0">
+                          400+
+                        </h3>
+                        <p class="mb-0 fw-semibold color-10">
+                          Go Shevak
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="card-box">
+                    <div class="row align-items-center">
+                      <div class="col-5">
+                        <img src="{% static 'images/home/icon-05.png'  %}' %}" class="img-fluid" alt="">
+                      </div>
+                      <div class="col-7 ps-0 text-end">
+                        <h3 class="fw-bold color-10 mb-0">
+                          60+
+                        </h3>
+                        <p class="mb-0 fw-semibold color-10">
+                          Doctors & Nursing Staff
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="card-box">
+                    <div class="row align-items-center">
+                      <div class="col-5">
+                        <img src="{% static 'images/home/icon-06.png'  %}' %}" class="img-fluid" alt="">
+                      </div>
+                      <div class="col-7 ps-0 text-end">
+                        <h3 class="fw-bold color-10 mb-0">
+                          40+
+                        </h3>
+                        <p class="mb-0 fw-semibold color-10">
+                          Tractors & Loaders
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 col-md-12 p-0 order-lg-2 order-1">
+              <div class="swiper bannerSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="{% static 'images/home/slider-01.jpg' %}" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'images/home/slider-01.jpg' %}" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'images/home/slider-01.jpg' %}" alt="">
+                  </div>
+                </div>
+                <!-- <div class="swiper-button-next">
+                </div>
+                <div class="swiper-button-prev">
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-black py-3 mx-2 home-section-2">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <span class="color-11 fw-bold fs-4">
+                Green Fodder Seva
+              </span>
+              <i class="bi bi-dot color-11 px-lg-3">
+              </i>
+              <span class="color-11 fw-bold fs-4">
+                Jaggery Seva
+              </span>
+              <i class="bi bi-dot color-11 px-lg-3">
+              </i>
+              <span class="color-11 fw-bold fs-4">
+                Adopt a calf
+              </span>
+              <i class="bi bi-dot color-11 px-lg-3">
+              </i>
+              <span class="color-11 fw-bold fs-4">
+                Adopt a cow
+              </span>
+              <i class="bi bi-dot color-11 px-lg-3">
+              </i>
+              <span class="color-11 fw-bold fs-4">
+                Medicine Kit Seva
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mx-2 bg-6 py-5 home-section-3 position-relative">
+        <div class="container-fluid">
+        <img class="vector_left position-absolute img-fluid" src="{% static 'images/about/vector-right.png'  %}" alt="vector">
+                <img class="vector_right position-absolute img-fluid" src="{% static 'images/about/vector-left.png'  %}" alt="vector">
+                <div><img class="vector_cow position-absolute img-fluid" src="{% static 'images/about/cow-1.png'  %}" alt="vector"></div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2 class="fw-bold display-4 color-4">
+                World’s largest Cow Rehabilitation Centre
+              </h2>
+              <h5 class="fw-bold color-4 pt-3">
+                Sri Krishna Balaram Seva Trust
+              </h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mx-2 py-3 px-lg-5 home-section-4">
+        <div class="container-fluid ">
+          <div class="row justify-content-between align-items-center g-3">
+            <div class="col-lg-5 col-md-6">
+              <h2 class="display-3 ff-antom">
+                Cow
+              </h2>
+              <h3 class="display-3 ff-antom text-bg">
+                rehabilitation
+              </h3>
+              <h5 class="fw-bold pt-2">
+                Sri Krishna Balram Seva Trust
+              </h5>
+            </div>
+            <div class="col-lg-5 col-md-6 ">
+              <h2 class="display-5 fw-semibold lh-1">
+                sanctuary for injured, sick, and vulnerable
+              </h2>
+              <p class="text-muted fw-semibold">
+                We strive to restore their health and well-being with a compassionate
+                approach and expert veterinary care.
+              </p>
+              <h6 class="fw-bold">
+                <span class="text-decoration-underline">
+                  More about Sri Krishna Balram Seva Trust
+                </span>
+                <a href="#" class="ps-2">
+                  <i class="bi bi-box-arrow-up-right">
+                  </i>
                 </a>
+              </h6>
             </div>
-
-            <nav class="navbar-custom">
-                <ul class="navbar-right list-inline float-right mb-0">
-
-                    <!-- language-->
-                    <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
-                        <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="{% static 'images/flags/us_flag.jpg' %}" class="mr-2" height="12" alt="" /> English <span class="mdi mdi-chevron-down"></span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated language-switch">
-                            <a class="dropdown-item" href="#"><img src="{% static 'images/flags/french_flag.jpg' %}" alt="" height="16" /><span> French </span></a>
-                            <a class="dropdown-item" href="#"><img src="{% static 'images/flags/spain_flag.jpg' %}" alt="" height="16" /><span> Spanish </span></a>
-                            <a class="dropdown-item" href="#"><img src="{% static 'images/flags/russia_flag.jpg' %}" alt="" height="16" /><span> Russian </span></a>
-                            <a class="dropdown-item" href="#"><img src="{% static 'images/flags/germany_flag.jpg' %}" alt="" height="16" /><span> German </span></a>
-                            <a class="dropdown-item" href="#"><img src="{% static 'images/flags/italy_flag.jpg' %}" alt="" height="16" /><span> Italian </span></a>
-                        </div>
-                    </li>
-
-                    <!-- full screen -->
-                    <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
-                        <a class="nav-link waves-effect" href="#" id="btn-fullscreen">
-                            <i class="mdi mdi-arrow-expand-all noti-icon"></i>
-                        </a>
-                    </li>
-
-                    <!-- notification -->
-                    <li class="dropdown notification-list list-inline-item">
-                        <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <i class="mdi mdi-bell-outline noti-icon"></i>
-                            <span class="badge badge-pill badge-danger noti-icon-badge">3</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-menu-lg px-1">
-                            <!-- item-->
-                            <h6 class="dropdown-item-text">
-                                    Notifications
-                                </h6>
-                            <div class="slimscroll notification-item-list">
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item active">
-                                    <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
-                                    <p class="notify-details"><b>Your order is placed</b><span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-danger"><i class="mdi mdi-message-text-outline"></i></div>
-                                    <p class="notify-details"><b>New Message received</b><span class="text-muted">You have 87 unread messages</span></p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-info"><i class="mdi mdi-filter-outline"></i></div>
-                                    <p class="notify-details"><b>Your item is shipped</b><span class="text-muted">It is a long established fact that a reader will</span></p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-success"><i class="mdi mdi-message-text-outline"></i></div>
-                                    <p class="notify-details"><b>New Message received</b><span class="text-muted">You have 87 unread messages</span></p>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-warning"><i class="mdi mdi-cart-outline"></i></div>
-                                    <p class="notify-details"><b>Your order is placed</b><span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
-                                </a>
-
-                            </div>
-                            <!-- All-->
-                            <a href="javascript:void(0);" class="dropdown-item text-center notify-all text-primary">
-                                    View all <i class="fi-arrow-right"></i>
-                                </a>
-                        </div>
-                    </li>
-
-                    <li class="dropdown notification-list list-inline-item">
-                        <div class="dropdown notification-list nav-pro-img">
-                            <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="{% static 'images/users/user-4.jpg' %}" alt="user" class="rounded-circle">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                                <!-- item-->
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Profile</a>
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-wallet"></i> Wallet</a>
-                                <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings"></i> Settings</a>
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline"></i> Lock screen</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-danger" href="#"><i class="mdi mdi-power text-danger"></i> Logout</a>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-
-                <ul class="list-inline menu-left mb-0">
-                    <li class="float-left">
-                        <button class="button-menu-mobile open-left waves-effect">
-                            <i class="mdi mdi-menu"></i>
-                        </button>
-                    </li>
-                    <li class="d-none d-md-inline-block">
-                        <form role="search" class="app-search">
-                            <div class="form-group mb-0">
-                                <input type="text" class="form-control" placeholder="Search..">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </div>
-                        </form>
-                    </li>
-                </ul>
-
-            </nav>
-
+          </div>
         </div>
-        <!-- Top Bar End -->
-
-        <!-- ========== Left Sidebar Start ========== -->
-        <div class="left side-menu">
-            <div class="slimscroll-menu" id="remove-scroll">
-
-                <!--- Sidemenu -->
-                <div id="sidebar-menu">
-                    <!-- Left Menu Start -->
-                    <ul class="metismenu" id="side-menu">
-                        <li class="menu-title">Menu</li>
-                        <li>
-                            <a href="index.html" class="waves-effect">
-                                <i class="icon-accelerator"></i><span class="badge badge-success badge-pill float-right">9+</span> <span> Dashboard </span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-mail-open"></i><span> Email <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                            <ul class="submenu">
-                                <li><a href="email-inbox.html">Inbox</a></li>
-                                <li><a href="email-read.html">Email Read</a></li>
-                                <li><a href="email-compose.html">Email Compose</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="calendar.html" class="waves-effect"><i class="icon-calendar"></i><span> Calendar </span></a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-paper-sheet"></i><span> Pages <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                            <ul class="submenu">
-                                <li><a href="pages-pricing.html">Pricing</a></li>
-                                <li><a href="pages-invoice.html">Invoice</a></li>
-                                <li><a href="pages-timeline.html">Timeline</a></li>
-                                <li><a href="pages-faqs.html">FAQs</a></li>
-                                <li><a href="pages-maintenance.html">Maintenance</a></li>
-                                <li><a href="pages-comingsoon.html">Coming Soon</a></li>
-                                <li><a href="pages-starter.html">Starter Page</a></li>
-                                <li><a href="pages-login.html">Login</a></li>
-                                <li><a href="pages-register.html">Register</a></li>
-                                <li><a href="pages-recoverpw.html">Recover Password</a></li>
-                                <li><a href="pages-lock-screen.html">Lock Screen</a></li>
-                                <li><a href="pages-404.html">Error 404</a></li>
-                                <li><a href="pages-500.html">Error 500</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="menu-title">Components</li>
-
-                        <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-pencil-ruler"></i> <span> UI Elements <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
-                            <ul class="submenu">
-                                <li><a href="ui-alerts.html">Alerts</a></li>
-                                <li><a href="ui-badge.html">Badge</a></li>
-                                <li><a href="ui-buttons.html">Buttons</a></li>
-                                <li><a href="ui-cards.html">Cards</a></li>
-                                <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-                                <li><a href="ui-navs.html">Navs</a></li>
-                                <li><a href="ui-tabs-accordions.html">Tabs &amp; Accordions</a></li>
-                                <li><a href="ui-modals.html">Modals</a></li>
-                                <li><a href="ui-images.html">Images</a></li>
-                                <li><a href="ui-progressbars.html">Progress Bars</a></li>
-                                <li><a href="ui-pagination.html">Pagination</a></li>
-                                <li><a href="ui-popover-tooltips.html">Popover & Tooltips</a></li>
-                                <li><a href="ui-spinner.html">Spinner</a></li>
-                                <li><a href="ui-carousel.html">Carousel</a></li>
-                                <li><a href="ui-video.html">Video</a></li>
-                                <li><a href="ui-typography.html">Typography</a></li>
-                                <li><a href="ui-grid.html">Grid</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-diamond"></i> <span> Advanced UI <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
-                            <ul class="submenu">
-                                <li><a href="advanced-alertify.html">Alertify</a></li>
-                                <li><a href="advanced-rating.html">Rating</a></li>
-                                <li><a href="advanced-nestable.html">Nestable</a></li>
-                                <li><a href="advanced-rangeslider.html">Range Slider</a></li>
-                                <li><a href="advanced-sweet-alert.html">Sweet-Alert</a></li>
-                                <li><a href="advanced-lightbox.html">Lightbox</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-todolist-check"></i><span> Forms <span class="badge badge-pill badge-danger float-right">8</span> </span></a>
-                            <ul class="submenu">
-                                <li><a href="form-elements.html">Form Elements</a></li>
-                                <li><a href="form-validation.html">Form Validation</a></li>
-                                <li><a href="form-advanced.html">Form Advanced</a></li>
-                                <li><a href="form-editors.html">Form Editors</a></li>
-                                <li><a href="form-uploads.html">Form File Upload</a></li>
-                                <li><a href="form-mask.html">Form Mask</a></li>
-                                <li><a href="form-summernote.html">Summernote</a></li>
-                                <li><a href="form-xeditable.html">Form Xeditable</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-graph"></i><span> Charts <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                            <ul class="submenu">
-                                <li><a href="charts-morris.html">Morris Chart</a></li>
-                                <li><a href="charts-chartist.html">Chartist Chart</a></li>
-                                <li><a href="charts-chartjs.html">Chartjs Chart</a></li>
-                                <li><a href="charts-flot.html">Flot Chart</a></li>
-                                <li><a href="charts-c3.html">C3 Chart</a></li>
-                                <li><a href="charts-other.html">Jquery Knob Chart</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-spread"></i><span> Tables <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                            <ul class="submenu">
-                                <li><a href="tables-basic.html">Basic Tables</a></li>
-                                <li><a href="tables-datatable.html">Data Table</a></li>
-                                <li><a href="tables-responsive.html">Responsive Table</a></li>
-                                <li><a href="tables-editable.html">Editable Table</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-coffee"></i> <span> Icons  <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span> </a>
-                            <ul class="submenu">
-                                <li><a href="icons-material.html">Material Design</a></li>
-                                <li><a href="icons-fontawesome.html">Font Awesome</a></li>
-                                <li><a href="icons-outline.html">Outline Icons</a></li>
-                                <li><a href="icons-themify.html">Themify Icons</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-map"></i><span> Maps <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                            <ul class="submenu">
-                                <li><a href="maps-google.html"> Google Map</a></li>
-                                <li><a href="maps-vector.html"> Vector Map</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-share"></i><span> Multi Level <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                            <ul class="submenu">
-                                <li><a href="javascript:void(0);"> Menu 1</a></li>
-                                <li>
-                                    <a href="javascript:void(0);">Menu 2  <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
-                                    <ul class="submenu">
-                                        <li><a href="javascript:void(0);">Menu 2.1</a></li>
-                                        <li><a href="javascript:void(0);">Menu 2.1</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                    </ul>
-
+      </section>
+      <section class="mx-2 px-lg-5 pb-5 home-section-5">
+        <div class="container-fluid">
+          <div class="row g-3 align-items-end">
+            <div class="col-lg-3 col-md-6 order-lg-1 order-2">
+              <img src="assets/images/home/cr-01.jpg" class="img-fluid w-100" alt="">
+              <div class="mt-3 position-relative">
+                <img src="assets/images/home/cr-02.jpg" class="img-fluid w-100" alt="" >
+                <div class="fw-bold position-absolute text-white f-24" style="bottom: 30px;left: 15%; line-height:28px;">Cow <br> Seva</div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 order-lg-2 order-1">
+              <div class="text-center">
+                <img src="assets/images/home/flower.png'  %}" class="img-fluid" alt="">
+              </div>
+              <div class="row justify-content-center ">
+                <div class="col-md-6">
+                  <div class="card card-body rounded-4 shadow">
+                    <div class="row align-items-center">
+                      <div class="col-4">
+                        <img src="assets/images/home/donation.svg" class="img-fluid" alt="">
+                      </div>
+                      <div class="col-8">
+                        <h3 class="fw-bold mb-0">
+                          400+
+                        </h3>
+                        <p class="mb-0 fw-semibold">
+                          Pepole as Cow Sevak
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <!-- Sidebar -->
-                <div class="clearfix"></div>
-
+              </div>
+              <div class="row mt-4 g-3">
+                <div class="col-md-6">
+                  <img src="assets/images/home/cr-03.jpg" class="img-fluid w-100" alt="">
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/home/cr-04.jpg" class="img-fluid w-100" alt="">
+                </div>
+              </div>
             </div>
-            <!-- Sidebar -left -->
-
+            <div class="col-lg-3 col-md-6 order-lg-3 order-3">
+              <img src="assets/images/home/cr-05.jpg" class="img-fluid w-100" alt="">
+              <div class="mt-3 position-relative">
+                <img src="assets/images/home/cr-06.jpg" class="img-fluid w-100" alt="">
+                <div class="fw-bold position-absolute text-white f-24" style="bottom: 30px;left: 15%; line-height:28px; max-width:170px">
+                World’s Largest Rehabilitation Centre
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Left Sidebar End -->
+      </section>
+      <section class="about_hinginiaVideo pt-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="h-100">
+                    <div class="video-container text-center" style="width: 100%; height: 100%; border-radius:15px; overflow:hidden">
+                    <iframe width="889" height="500" style="border-radius:20px" src="https://www.youtube.com/embed/IPU9oUjlDoc?si=G_65b4bAMBhOaUpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section class="px-lg-5 py-5 home-section-6 position-relative">
+        <img src="assets/images/home/vector-1.png'  %}" class="element-1">
+        <img src="assets/images/home/vector-2.png'  %}" class="element-2">
+        <img src="assets/images/home/vector-3.png'  %}" class="element-3">
+        <div class="container-fluid mx-lg-2  z-3 position-relative">
+          <div class="row g-4">
+            <div class="col-md-12 text-center">
+              <h2 class="color-1 ff-epilogue fw-bold display-4">
+                Hingonia
+              </h2>
+              <h3 class="fw-medium ff-epilogue display-6">
+                Sri Krishna Balram Seva Trust
+              </h3>
+            </div>
+            <div class="col-lg-6">
+              <p class="hs-desc">
+                In 2016, the Government of Rajasthan and the Jaipur Nagar Nigam decided
+                to partner with Hare Krishna Movement Jaipur, which runs the Sri Sri Krishna
+                Balaram Mandir at the Akshaya Patra mid day meal centralized kitchen campus
+                at Jagatpura, Jaipur. The full time missionaries of Hare Krishna Movement
+                accepted the humble service to mother cows at Hingonia. A special purpose
+                vehicle, Sri Krishna Balaram Seva Trust, was set up to run the Hingonia
+                centre with the aid of Jaipur Nagar Nigam. This trust is a non profit organization,
+                dedicated for serving the cattle at Hingonia. The Trust consists of 3 government
+                officials, 3 independent trustees and 9 missionary trustees. The operations
+                are managed by the full time missionaries of the Trust.
+                <a href="#" class="color-1">
+                  Read More
+                </a>
+              </p>
+              <div class="row g-3">
+                <div class="col-lg-6 col-md-6">
+                  <div class="card card-body shadow rounded-5 bg-7 text-center">
+                    <h2 class="fw-bold color-10">
+                      Join 10,000+ Helpers & Doctors
+                    </h2>
+                    <div>
+                      <img src="assets/images/skbt-logo.webp" width="80" alt="">
+                    </div>
+                    <div class="mt-3">
+                      <a href="#" class="cm-btn border border-dark-subtle bg-7 color-10 fs-5">
+                        Become a Voluteer
+                        <i class="bi bi-arrow-right color-10">
+                        </i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="bg-img-card rounded-5 p-4 mt-3" style="background-image: url('assets/images/home/vision.jpg');">
+                    <p class="text-white pb-5 fs-4 lh-sm">
+                      <strong class="text-white">
+                        Our Vision
+                      </strong>
+                      is To ensure that every stray and accidental cows in India is well-fed
+                      and cared for.
+                    </p>
+                    <div class="py-md-4">
+                    </div>
+                    <div class="pt-5">
+                      <a href="#" class="cm-btn p-0">
+                        <img src="assets/images/home/more-btn.png'  %}" class="img-fluid" alt="">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="bg-img-card rounded-5 p-4" style="background-image: url('assets/images/home/mission.jpg');">
+                    <p class="text-white pb-5 fs-4 lh-sm">
+                      <strong class="text-white">
+                        Our Mission
+                      </strong>
+                      is To provide nourishment and care to 30,000 stray and accidental cows
+                      by 2030.
+                    </p>
+                    <div class="py-md-4">
+                    </div>
+                    <div class="pt-5">
+                      <a href="#" class="cm-btn p-0">
+                        <img src="assets/images/home/more-btn.png'  %}" class="img-fluid" alt="">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="mt-lg-5 mt-4 text-center">
+                    <img src="assets/images/skbt-logo.webp" class="img-fluid" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="contribute-card rounded-5 shadow">
+                <img src="assets/images/home/contribute.png'  %}" class="img-fluid" alt="">
+                <div class="p-4">
+                  <h2 class="color-7">
+                    🌟 Join the Online Movement to Support Hingonia's Cause! 🐄💙
+                  </h2>
+                  <p class="color-7 hs-desc">
+                    At Hingonia, we believe that everyone can contribute, regardless of their
+                    financial situation. If you find yourself unable to make a monetary donation,
+                    fret not! You can still make a significant impact by sharing our cause
+                    within your circle and helping us reach more caring hearts.
+                  </p>
+                  <p class="color-7 hs-desc">
+                    How You Can Help Without Spending a Dime:
+                  </p>
+                  <ol>
+                    <li class="color-7 hs-desc">
+                      🌟 Share the Message: Post about Hingonia and our fundraiser on your social
+                      media platforms. Your personal touch can inspire others to join the cause.
+                    </li>
+                    <li class="color-7 hs-desc py-3">
+                      🗣️ Talk About It: Spread the word among your friends, family, and colleagues.
+                      A simple conversation can create ripples of awareness and support.
+                    </li>
+                    <li class="color-7 hs-desc">
+                      🌐 Digital Amplification: Share our digital assets—images, videos, and
+                      infographics—across your online networks. These visuals tell the heartfelt
+                      story of Hingonia and make a lasting impression.
+                    </li>
+                  </ol>
+                  <div class="mt-4">
+                    <a href="#" class="cm-btn bg-7 d-block text-center color-10">
+                      <i class="bi bi-share color-10">
+                      </i>
+                      Spread the Cause
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mx-2 py-2 campaign-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="swiper campaignSwiper swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="slide_content rounded-5" style="background-color: #C21959;">
+                      <div class="row justify-content-center align-items-center">
+                        <div class="col-8">
+                          <h6 class="text-white">
+                            #Haven_for_cows
+                          </h6>
+                          <h5 class="text-white fw-semibold ff-epilogue mb-0">
+                            Infrastructure
+                          </h5>
+                        </div>
+                        <div class="col-2">
+                          <a href="#">
+                            <i class="bi bi-share text-white fs-3">
+                            </i>
+                          </a>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="assets/images/home/campaign-01.jpg" class="campaign-img" alt="">
+                      </div>
+                      <h2 class="campaign-title text-center text-white fw-bold">
+                        Cow Shed
+                      </h2>
+                      <div class="row mb-1">
+                        <div class="col-6">
+                          <h6 class="text-white mb-0 f-14 fw-medium">
+                            raised
+                          </h6>
+                        </div>
+                        <div class="col-6 text-end">
+                          <h6 class="text-white mb-0 f-14 fw-medium">
+                            Goal
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100">
+                        <div class="progress-bar text-bg-light" style="width: 75%">
+                        </div>
+                      </div>
+                      <div class="row mt-1">
+                        <div class="col-6">
+                          <h5 class="text-white ff-epilogue f-16">
+                            <i class="bi bi-currency-rupee text-white">
+                            </i>
+                            7500
+                          </h5>
+                        </div>
+                        <div class="col-6 text-end">
+                          <h5 class="text-white ff-epilogue f-16">
+                            <i class="bi bi-currency-rupee text-white">
+                            </i>
+                            10000
+                          </h5>
+                        </div>
+                      </div>
+                      <h3 class="campaign-subtitle text-white fw-semibold">
+                        Join Us in Creating a Haven for Abandoned Cows!
+                      </h3>
+                      <div class="row pt-3">
+                        <div class="col-12">
+                          <a href="#" class="campaign-btn" style="color: #C21959;" data-bs-toggle="modal" data-bs-target="#donate1">
+                            Donate Now
+                          </a>
+                          <a href="#" class="knowMore-donate ext-decoration-underline text-white fw-bold ps-3 simple-link" data-bs-toggle="modal" data-bs-target="#knowMoredonate1">
+                            know more
+                          </a>
+                        </div>
+                        <div class="col-6">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nextSlide swiper-slide" >
+                    <div class="slide_content rounded-5" style="background-color: #00C4AC;" >
+                      <div class="row justify-content-center align-items-center">
+                        <div class="col-8">
+                          <h6 class="text-white">
+                            #Hospital_for_cows
+                          </h6>
+                          <h5 class="text-white fw-semibold ff-epilogue mb-0">
+                            Health Care
+                          </h5>
+                        </div>
+                        <div class="col-2">
+                          <a href="#">
+                            <i class="bi bi-share text-white fs-3">
+                            </i>
+                          </a>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="assets/images/home/campaign-02.jpg" class="campaign-img" alt="">
+                      </div>
+                      <h2 class="campaign-title text-center text-white fw-bold">
+                        Medical Treatment
+                      </h2>
+                      <div class="row mb-1">
+                        <div class="col-6">
+                          <h6 class="text-white mb-0 f-14 fw-medium">
+                            raised
+                          </h6>
+                        </div>
+                        <div class="col-6 text-end">
+                          <h6 class="text-white mb-0 f-14 fw-medium">
+                            Goal
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100">
+                        <div class="progress-bar text-bg-light" style="width: 45%">
+                        </div>
+                      </div>
+                      <div class="row mt-1">
+                        <div class="col-6">
+                          <h5 class="text-white ff-epilogue f-16">
+                            <i class="bi bi-currency-rupee text-white">
+                            </i>
+                            17,500
+                          </h5>
+                        </div>
+                        <div class="col-6 text-end">
+                          <h5 class="text-white ff-epilogue f-16">
+                            <i class="bi bi-currency-rupee text-white">
+                            </i>
+                            1,00,000
+                          </h5>
+                        </div>
+                      </div>
+                      <h3 class="campaign-subtitle text-white fw-semibold">
+                        Creating a Sanctuary for Sacred Cows Well-being
+                      </h3>
+                      <div class="row pt-3">
+                        <div class="col-12">
+                          <a href="#" class="campaign-btn" style="color: #00C4AC;" data-bs-toggle="modal" data-bs-target="#donate2">
+                            Donate Now
+                          </a>
+                          <a href="#"class="knowMore-donate ext-decoration-underline text-white fw-bold ps-3 simple-link" data-bs-toggle="modal" data-bs-target="#knowMoredonate2">
+                            know more
+                          </a>
+                        </div>
+                        <div class="col-6">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nextSlide swiper-slide" >
+                    <div class="slide_content rounded-5" style="background-color: #FF7A41;">
+                      <div class="row justify-content-center align-items-center">
+                        <div class="col-8">
+                          <h6 class="text-white">
+                            #Food_for_cows
+                          </h6>
+                          <h5 class="text-white fw-semibold ff-epilogue mb-0">
+                            Go Seva
+                          </h5>
+                        </div>
+                        <div class="col-2">
+                          <a href="#">
+                            <i class="bi bi-share text-white fs-3">
+                            </i>
+                          </a>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="assets/images/home/campaign-02.jpg" class="campaign-img" alt="">
+                      </div>
+                      <h2 class="campaign-title text-center text-white fw-bold">
+                        Feeding Cows
+                      </h2>
+                      <div class="row mb-1">
+                        <div class="col-6">
+                          <h6 class="text-white mb-0 f-14 fw-medium">
+                            raised
+                          </h6>
+                        </div>
+                        <div class="col-6 text-end">
+                          <h6 class="text-white mb-0 f-14 fw-medium">
+                            Goal
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100">
+                        <div class="progress-bar text-bg-light" style="width: 45%">
+                        </div>
+                      </div>
+                      <div class="row mt-1">
+                        <div class="col-6">
+                          <h5 class="text-white ff-epilogue f-16">
+                            <i class="bi bi-currency-rupee text-white">
+                            </i>
+                            17,500
+                          </h5>
+                        </div>
+                        <div class="col-6 text-end">
+                          <h5 class="text-white ff-epilogue f-16">
+                            <i class="bi bi-currency-rupee text-white">
+                            </i>
+                            1,00,000
+                          </h5>
+                        </div>
+                      </div>
+                      <h3 class="campaign-subtitle text-white fw-semibold">
+                        Ensuring Nutritious Food and Holistic Care for Our Precious Cows
+                      </h3>
+                      <div class="row pt-3">
+                        <div class="col-12">
+                          <a href="#" class="campaign-btn" style="color: #FF7A41;" data-bs-toggle="modal" data-bs-target="#donate2">
+                            Donate Now
+                          </a>
+                          <a href="#" class="knowMore-donate ext-decoration-underline text-white fw-bold ps-3 simple-link" data-bs-toggle="modal" data-bs-target="#knowMoredonate3">
+                            know more
+                          </a>
+                        </div>
+                        <div class="col-6">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="swiper-button-next">
+                </div>
+                <div class="swiper-button-prev">
+                </div> -->
+              </div>
+            </div>
+          </div>
 
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
-        <div class="content-page">
-            <!-- Start content -->
-            <div class="content">
-                <div class="container-fluid">
-                    <div class="page-title-box">
-                        <div class="row align-items-center">
-                            <div class="col-sm-6">
-                                <h4 class="page-title">Dashboard</h4>
-                            </div>
-                            <div class="col-sm-6">
-                                <ol class="breadcrumb float-right">
-                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Stexo</a></li>
-                                    <li class="breadcrumb-item active">Dashboard</li>
+          <!-- Model -->
+
+          <!-- Modal 1 -->
+            <div class="donateModel"> 
+              <div class="modal fade" id="donate1"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="donate1Label" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title fw-bold w-100 f-24">Cow Shed</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="donateSilde" id="donateSlide">
+                              <div class="row zIndex-3 donationForm_wr">
+                                <div class="col-xl-6 col-lg-7">
+                                  <div class="card_donate d-flex gap-2 mb-2" id="card_donate_1">
+                                    <img src="assets/images/home/steel.png'  %}" class="card-img-top img-fluid" alt="Steel Structure Seva">
+                                    <div class="card-body d-flex flex-row gap-2">
+                                        <div>
+                                            <h5 class="card-title fw-bold">Steel Structure Seva</h5>
+                                            <p class="card-text f-12">Welcome abandoned cows to a safe haven with sturdy steel structures offering shelter and care. Join us in creating their sanctuary.</p>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <div class="add_button">
+                                                <button class="btn btn-primary f-12 add-button">Add +</button>
+                                            </div>
+                                            <div class="quantity-container" style="display: none;">
+                                                <button class="btn btn-primary f-14 decrement-btn">-</button>
+                                                <span class="mx-2 quantity-value">0</span>
+                                                <button class="btn btn-primary f-14 increment-btn">+</button>
+                                                <button class="btn btn-primary interBtn enter-button">Enter</button>
+                                            </div>
+                                            <div class="added-button" style="display: none;">
+                                                <button class="btn btn-primary f-12 bg-dark text-white">
+                                                    Added 
+                                                    <img src="assets/images/home/done_all.png'  %}" class="card-img-top img-fluid" style="width:auto; height:16px" alt="done">
+                                                </button>
+                                            </div>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="card_donate d-flex gap-2 mb-2" id="card_donate_1">
+                                    <img src="assets/images/home/concrete.png'  %}" class="card-img-top img-fluid" alt="concrete Seva">
+                                    <div class="card-body d-flex flex-row gap-2">
+                                        <div>
+                                          <h5 class="card-title fw-bold">Concrete Seva</h5>
+                                          <p class="card-text f-12">A solid sanctuary for abandoned cows. Join us in building their haven with sturdy structures, offering shelter and care to these gentle beings.</p>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <div class="add_button">
+                                                <button class="btn btn-primary f-12 add-button">Add +</button>
+                                            </div>
+                                            <div class="quantity-container" style="display: none;">
+                                                <button class="btn btn-primary f-14 decrement-btn">-</button>
+                                                <span class="mx-2 quantity-value">0</span>
+                                                <button class="btn btn-primary f-14 increment-btn">+</button>
+                                                <button class="btn btn-primary interBtn enter-button">Enter</button>
+                                            </div>
+                                            <div class="added-button" style="display: none;">
+                                                <button class="btn btn-primary f-12 bg-dark text-white">
+                                                    Added 
+                                                    <img src="assets/images/home/done_all.png'  %}" class="card-img-top img-fluid" style="width:auto; height:16px" alt="done">
+                                                </button>
+                                            </div>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                        </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="card_donate d-flex gap-2 mb-2" id="card_donate_1">
+                                    <img src="assets/images/home/cement.png'  %}" class="card-img-top img-fluid" alt="cement Seva">
+                                    <div class="card-body d-flex flex-row gap-2">
+                                        <div>
+                                          <h5 class="card-title fw-bold">Cement Seva</h5>
+                                          <p class="card-text f-12"> A reliable sanctuary for abandoned cows. Join us in constructing their haven with sturdy structures, providing shelter and care to these gentle beings.</p>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <div class="add_button">
+                                                <button class="btn btn-primary f-12 add-button">Add +</button>
+                                            </div>
+                                            <div class="quantity-container" style="display: none;">
+                                                <button class="btn btn-primary f-14 decrement-btn">-</button>
+                                                <span class="mx-2 quantity-value">0</span>
+                                                <button class="btn btn-primary f-14 increment-btn">+</button>
+                                                <button class="btn btn-primary interBtn enter-button">Enter</button>
+                                            </div>
+                                            <div class="added-button" style="display: none;">
+                                                <button class="btn btn-primary f-12 bg-dark text-white">
+                                                    Added 
+                                                    <img src="assets/images/home/done_all.png'  %}" class="card-img-top img-fluid" style="width:auto; height:16px" alt="done">
+                                                </button>
+                                            </div>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="card_donate d-flex gap-2 mb-2" id="card_donate_1">
+                                    <img src="assets/images/home/aggregate.png'  %}" class="card-img-top img-fluid" alt="Aggregate Seva">
+                                    <div class="card-body d-flex flex-row gap-2">
+                                        <div>
+                                          <h5 class="card-title fw-bold">Aggregate Seva</h5>
+                                          <p class="card-text f-12">  A reliable sanctuary for abandoned cows. Join us in constructing their haven with sturdy structures, providing shelter and care to these gentle beings.</p>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <div class="add_button">
+                                                <button class="btn btn-primary f-12 add-button">Add +</button>
+                                            </div>
+                                            <div class="quantity-container" style="display: none;">
+                                                <button class="btn btn-primary f-14 decrement-btn">-</button>
+                                                <span class="mx-2 quantity-value">0</span>
+                                                <button class="btn btn-primary f-14 increment-btn">+</button>
+                                                <button class="btn btn-primary interBtn enter-button">Enter</button>
+                                            </div>
+                                            <div class="added-button" style="display: none;">
+                                                <button class="btn btn-primary f-12 bg-dark text-white">
+                                                    Added 
+                                                    <img src="assets/images/home/done_all.png'  %}" class="card-img-top img-fluid" style="width:auto; height:16px" alt="done">
+                                                </button>
+                                            </div>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-5 mt-2 mt-lg-0">
+                                    <div class="card_donate fw-medium zIndex-3 position-relative">
+                                      <p class="mb-1 f-14">
+                                          By supporting <span class="color-26 fw-bold">Hingonia</span>, you are helping us reach out to more campaigns like this and scale our impact. <a href="#" class="color-26 text-decoration-underline fw-bold">Learn More.</a>
+                                      </p>
+                                      <div class="d-flex justify-content-between">
+                                          <span class="f-12 fw-bold">Support us by :</span>
+                                          <span class="supportPer f-12 fw-bold px-1" style="background:#F5F5F5; border:2px inset #0000001c; border-radius: 5px">
+                                              <select class="h-100">
+                                                <option value="IN">16% (₹160)</option>
+                                                <option value="US">22% (₹200)</option>
+                                              </select>
+                                          </span>
+                                      </div>
+                                    </div>
+                                    <div class="donateForm_wr py-3">
+                                      <form onsubmit="return false">
+                                          <div class="mb-3 position-relative">
+                                            <label for="nameInput" class="form-label position-absolute f-12 fw-medium">Name</label>
+                                            <input type="text" class="form-control" placeholder="Srimaan Nivas" id="nameInput" aria-describedby="nameHelp">
+                                          </div>
+                                          <div class="mb-3 position-relative">
+                                            <label for="emailInput" class="form-label position-absolute f-12 fw-medium">Email</label>
+                                            <input type="text" class="form-control" placeholder="nivaashri@gmail.com" id="emailInput" aria-describedby="emailHelp">
+                                          </div>
+                                          <div class="mb-3 position-relative">
+                                            <div class="position-absolute country_code h-100">
+                                                <select class="h-100">
+                                                  <option value="IN">IN</option>
+                                                  <option value="US">US</option>
+                                                  <option value="UK">UK</option>
+                                                </select>
+                                            </div>
+                                            <label for="nameInput" class="form-label position-absolute f-12 fw-medium">Number</label>
+                                            <input type="text" class="phone-number w-100" placeholder="+91 00000-00000">
+                                            <div class="help-icon position-absolute flexBoxCenter" title="Enter your mobile number including the country code.">?</div>
+                                          </div>
+                                          <div class="donate_CountryBtn d-flex align-items-center">
+                                              <div>
+                                                  <input class="checkBox form-check-input" type="radio" name="nationality" id="nationality">
+                                                  <label class="form-check-label fw-bold" for="nationality">Nationality</label>
+                                              </div>
+                                              <button class="countryBtn active" id="indian-btn">INDIAN</button>
+                                              <button class="countryBtn non_indian" id="non-indian-btn">NOT INDIAN</button>
+                                          </div>
+                                      </form>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex gap-3 mt-2">
+                                      <div class="custom_amount flexBoxCenter">
+                                          <div class="title fw-bold">Custom Amount:</div>
+                                          <div class="amount">
+                                            <input id="number" type="text" />
+                                          </div>
+                                      </div>
+                                      <div class="currency">
+                                          <span class="f-14 fw-semibold">Currency</span>
+                                          <div class="inrSelect">
+                                            <select class="h-100">
+                                                <option value="IN">INR</option>
+                                                <option value="US">USD</option>
+                                                <option value="UK">$</option>
+                                            </select>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 pt-1">
+                                    <div class="d-flex align-items-center messageBox gap-2">
+                                      <input type="checkbox" class="donationMessage position-relative" id="anonymous">
+                                      <label class="f-14 m-0 py-1 form-check-label" for="anonymous">
+                                        Make my Donation Anonymous
+                                      </label>
+                                    </div>
+                                    <div class="d-flex align-items-center messageBox gap-2">
+                                        <input type="checkbox" class="donationMessage position-relative"  id="whatsapp">
+                                        <label class="f-14 m-0 py-1 form-check-label" for="whatsapp">
+                                          I want to receive transaction and donation updates on WhatsApp
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 pt-1">
+                                    <div class=" messageBox">
+                                      <div class="d-flex align-items-center gap-2">
+                                        <input type="checkbox" class="donationMessage gap-2 position-relative"  id="request2">
+                                        <label class="f-14 m-0 py-1 form-check-label" for="request2">
+                                          Request 80 G
+                                        </label>
+                                      </div>
+                                      <div class="monthly_donate d-flex align-items-center">
+                                          <div class="monthly d-flex align-items-center justify-content-between">
+                                            <button class="btn messageBox flexBoxCenter gap-2 fw-bold">
+                                              <input type="checkbox" class="md_btn donationMessage position-relative"  id="donateMOnthly">
+                                              <label class="f-14 m-0 py-1 form-check-label" for="donateMOnthly">
+                                                Donate Monthly
+                                              </label>
+                                            </button>
+                                            <div class="d-flex flex-column align-items-end">
+                                                <span class="f-14 fw-bold">TOTAL AMOUNT</span>
+                                                <span class="f-27 color-12 fw-bold" style="line-height:normal">RS. 1,160</span>
+                                            </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="dSubmit pt-2">
+                                      <button class="btn btnPink fw-bold btnAnimation">DONATE NOW</button>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="knowMore_donateModel">
+              <div class="modal fade" id="knowMoredonate1"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="knowMoredonate1Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title fw-bold w-100 f-24">Feeding Cows</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="learnMore_donate" id="learnMoreSlide">
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="social_wr d-flex gap-1 flex-wrap">
+                                  <div class="facebook ">
+                                    <a href="#" class="py-2 px-3 fw-bold f-14">Facebook</a href="#">
+                                  </div>
+                                  <div class="instagram ">
+                                    <a href="#" class="py-2 px-3 fw-bold f-14">Instagram</a href="#">
+                                  </div>
+                                  <div class="whatsapp ">
+                                    <a href="#" class="py-2 px-3 fw-bold f-14">Whatsapp</a href="#">
+                                  </div>
+                                  <div class="twitter ">
+                                    <a href="#" class="py-2 px-3 fw-bold f-14">Twitter</a href="#">
+                                  </div>
+                              </div>
+                              <h4 class="display-5 color-27 fw-semibold">Donor Privileges</h4>
+                              <div class="pt-3 pt-lg-0">
+                                <ol class="f-14 fw-medium">
+                                  <li class=" color-27 lineHeight-30">
+                                    Gau Puja on your name
+                                  </li>
+                                  <li class=" color-27 lineHeight-30">
+                                    Digital Certificate of Your Goseva Contribution
+                                  </li>
+                                  <li class=" color-27 lineHeight-30">
+                                    80G Tax Exemption Certificate
+                                  </li>
+                                  <li class=" color-27 lineHeight-30">
+                                    On donating 11000 & above you will get 100% Pure Products from our gaushala.
+                                  </li>
                                 </ol>
+                              </div>
+                              <div>
+                                <div class="share text-center mb-2">
+                                  <div class=" share_btn flexBoxCenter d-inline-block">
+                                    <button class="btn p-2">
+                                      <img class="img-fluid width-20" src="assets/images/home/share.png'  %}" alt="share">
+                                      <span class=" color-27 fw-semibold">Share</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="desc_wr">
+                                  <h6 class="fw-semibold">Cows in Divine Protection</h6>
+                                  <p>
+                                    In the lore of Krishna, cows symbolize purity and abundance, receiving divine protection. Their care is integral to sustaining balance and harmony in the cosmic order, reflecting Krishna's compassionate guardianship.
+                                  </p>
+                                  <button class="btnAnimation">
+                                    <img class="img-fluid width-20 me-1" src="assets/images/home/favorite.png'  %}" alt="favorite">
+                                    Donate
+                                  </button>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                        <!-- end row -->
+                      </div>
                     </div>
-                    <!-- end page-title -->
+                  </div>
+              </div>
+            </div>
+           <!-- Modal 1 -->
 
-                    <div class="row">
-
-                        <div class="col-sm-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-heading p-4">
-                                    <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-cube-outline bg-primary  text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="font-16">Active Sessions</h5>
-                                    </div>
-                                    <h3 class="mt-4">43,225</h3>
-                                    <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">75%</span></p>
-                                </div>
-                            </div>
+            <!-- Modal 2 -->
+            <div class="donateModel">
+              <div class="modal fade" id="donate2"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="donate1Label2" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title fw-bold w-100 f-24">Medical Treatment</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-
-                        <div class="col-sm-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-heading p-4">
-                                    <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-briefcase-check bg-success text-white"></i>
+                        <div class="modal-body">
+                          <div class="donateSilde" id="donateSlide">
+                              <div class="row zIndex-3 donationForm_wr">
+                                <div class="col-xl-6 col-lg-7">
+                                    <div class="card_donate d-flex flex-row gap-2 mb-2">
+                                      <img src="assets/images/home/steel.png'  %}" class="card-img-top img-fluid" alt="Steel Structure Seva">
+                                      <div class="card-body d-flex flex-row gap-2">
+                                          <div>
+                                            <h5 class="card-title fw-bold">Steel Structure Seva</h5>
+                                            <p class="card-text f-12">Welcome abandoned cows to a safe haven with sturdy steel structures offering shelter and care. Join us in creating their sanctuary.</p>
+                                          </div>
+                                          <div class="flex-shrink-0">
+                                            <button class="btn btn-primary f-12">Add +</button>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <div>
-                                        <h5 class="font-16">Total Revenue</h5>
+                                    <div class="card_donate d-flex flex-row gap-2 mb-2">
+                                      <img src="assets/images/home/concrete.png'  %}" class="card-img-top img-fluid" alt="concrete Seva">
+                                      <div class="card-body d-flex flex-row gap-2">
+                                          <div>
+                                            <h5 class="card-title fw-bold">Concrete Seva</h5>
+                                            <p class="card-text f-12">A solid sanctuary for abandoned cows. Join us in building their haven with sturdy structures, offering shelter and care to these gentle beings.</p>
+                                          </div>
+                                          <div class="flex-shrink-0">
+                                            <button class="btn btn-primary f-12">Add +</button>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <h3 class="mt-4">$73,265</h3>
-                                    <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="card_donate d-flex flex-row gap-2 mb-2">
+                                      <img src="assets/images/home/cement.png'  %}" class="card-img-top img-fluid" alt="cement Seva">
+                                      <div class="card-body d-flex flex-row gap-2">
+                                          <div>
+                                            <h5 class="card-title fw-bold">Cement Seva</h5>
+                                            <p class="card-text f-12"> A reliable sanctuary for abandoned cows. Join us in constructing their haven with sturdy structures, providing shelter and care to these gentle beings.</p>
+                                          </div>
+                                          <div class="flex-shrink-0">
+                                            <button class="btn btn-primary f-12">Add +</button>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">88%</span></p>
+                                    <div class="card_donate d-flex flex-row gap-2">
+                                      <img src="assets/images/home/aggregate.png'  %}" class="card-img-top img-fluid" alt="Aggregate Seva">
+                                      <div class="card-body d-flex flex-row gap-2">
+                                          <div>
+                                            <h5 class="card-title fw-bold">Aggregate Seva</h5>
+                                            <p class="card-text f-12">  A reliable sanctuary for abandoned cows. Join us in constructing their haven with sturdy structures, providing shelter and care to these gentle beings.</p>
+                                          </div>
+                                          <div class="flex-shrink-0">
+                                            <button class="btn btn-primary f-12 bg-dark text-white">
+                                            Added 
+                                            <img src="assets/images/home/done_all.png'  %}" class="card-img-top img-fluid" style="width:auto; height:16px" alt="done">
+                                            </button>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                          </div>
+                                      </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-heading p-4">
-                                    <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-tag-text-outline bg-warning text-white"></i>
+                                <div class="col-xl-6 col-lg-5 mt-2 mt-lg-0">
+                                    <div class="card_donate fw-medium zIndex-3 position-relative">
+                                      <p class="mb-1 f-14">
+                                          By supporting <span class="color-26 fw-bold">Hingonia</span>, you are helping us reach out to more campaigns like this and scale our impact. <a href="#" class="color-26 text-decoration-underline fw-bold">Learn More.</a>
+                                      </p>
+                                      <div class="d-flex justify-content-between">
+                                          <span class="f-12 fw-bold">Support us by :</span>
+                                          <span class="supportPer f-12 fw-bold px-1" style="background:#F5F5F5; border:2px inset #0000001c; border-radius: 5px">
+                                            <select class="h-100">
+                                              <option value="IN">16% (₹160)</option>
+                                              <option value="US">22% (₹200)</option>
+                                            </select>
+                                        </span>
+                                      </div>
                                     </div>
-                                    <div>
-                                        <h5 class="font-16">Average Price</h5>
-                                    </div>
-                                    <h3 class="mt-4">447</h3>
-                                    <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">68%</span></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-heading p-4">
-                                    <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-buffer bg-danger text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="font-16">Add to Card</h5>
-                                    </div>
-                                    <h3 class="mt-4">86%</h3>
-                                    <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">82%</span></p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xl-8">
-                            <div class="card m-b-30">
-                                <div class="card-body">
-
-                                    <h4 class="mt-0 header-title mb-4">Area Chart</h4>
-
-                                    <div id="morris-area-example" class="morris-charts morris-chart-height"></div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end col -->
-
-                        <div class="col-xl-4">
-                            <div class="card m-b-30">
-                                <div class="card-body">
-                                    <h4 class="mt-0 header-title mb-4">Donut Chart</h4>
-
-                                    <div id="morris-donut-example" class="morris-charts morris-chart-height"></div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->
-
-                    <div class="row">
-                        <div class="col-xl-4">
-                            <div class="card m-b-30">
-                                <div class="card-body">
-                                    <h4 class="mt-0 header-title mb-4">Friends Suggestions</h4>
-                                    <div class="friends-suggestions">
-                                        <a href="#" class="friends-suggestions-list">
-                                            <div class="border-bottom position-relative">
-                                                <div class="float-left mb-0 mr-3">
-                                                    <img src="{% static 'images/users/user-2.jpg' %}" alt="" class="rounded-circle thumb-md">
-                                                </div>
-                                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                                    <i class="mdi mdi-plus"></i>
-                                                </div>
-
-                                                <div class="desc">
-                                                    <h5 class="font-14 mb-1 pt-2 text-dark">Ralph Ramirez</h5>
-                                                    <p class="text-muted">3 Friend suggest</p>
-                                                </div>
+                                    <div class="donateForm_wr py-3">
+                                      <form onsubmit="return false">
+                                          <div class="mb-3 position-relative">
+                                            <label for="nameInput" class="form-label position-absolute f-12 fw-medium">Name</label>
+                                            <input type="text" class="form-control" placeholder="Srimaan Nivas" id="nameInput" aria-describedby="nameHelp">
+                                          </div>
+                                          <div class="mb-3 position-relative">
+                                            <label for="emailInput" class="form-label position-absolute f-12 fw-medium">Email</label>
+                                            <input type="text" class="form-control" placeholder="nivaashri@gmail.com" id="emailInput" aria-describedby="emailHelp">
+                                          </div>
+                                          <div class="mb-3 position-relative">
+                                            <div class="position-absolute country_code h-100">
+                                                <select class="h-100">
+                                                  <option value="IN">IN</option>
+                                                  <option value="US">US</option>
+                                                  <option value="UK">UK</option>
+                                                </select>
                                             </div>
-                                        </a>
-
-                                        <a href="#" class="friends-suggestions-list">
-                                            <div class="border-bottom position-relative">
-                                                <div class="float-left mb-0 mr-3">
-                                                    <img src="{% static 'images/users/user-3.jpg' %}" alt="" class="rounded-circle thumb-md">
-                                                </div>
-                                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                                    <i class="mdi mdi-plus"></i>
-                                                </div>
-
-                                                <div class="desc">
-                                                    <h5 class="font-14 mb-1 pt-2 text-dark">Patrick Beeler</h5>
-                                                    <p class="text-muted">17 Friend suggest</p>
-                                                </div>
+                                            <label for="nameInput" class="form-label position-absolute f-12 fw-medium">Number</label>
+                                            <input type="text" class="phone-number w-100" placeholder="+91 00000-00000">
+                                            <div class="help-icon position-absolute flexBoxCenter" title="Enter your mobile number including the country code.">?</div>
+                                          </div>
+                                          <div class="donate_CountryBtn d-flex align-items-center">
+                                            <div>
+                                                <input class="checkBox form-check-input" type="radio" name="nationality" id="nationality">
+                                                <label class="form-check-label fw-bold" for="nationality">Nationality</label>
                                             </div>
-                                        </a>
-
-                                        <a href="#" class="friends-suggestions-list">
-                                            <div class="border-bottom position-relative">
-                                                <div class="float-left mb-0 mr-3">
-                                                    <img src="{% static 'images/users/user-4.jpg' %}" alt="" class="rounded-circle thumb-md">
-                                                </div>
-                                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                                    <i class="mdi mdi-plus"></i>
-                                                </div>
-
-                                                <div class="desc">
-                                                    <h5 class="font-14 mb-1 pt-2 text-dark">Victor Zamora</h5>
-                                                    <p class="text-muted">12 Friend suggest</p>
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="friends-suggestions-list">
-                                            <div class="border-bottom position-relative">
-                                                <div class="float-left mb-0 mr-3">
-                                                    <img src="{% static 'images/users/user-5.jpg' %}" alt="" class="rounded-circle thumb-md">
-                                                </div>
-                                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                                    <i class="mdi mdi-plus"></i>
-                                                </div>
-
-                                                <div class="desc">
-                                                    <h5 class="font-14 mb-1 pt-2 text-dark">Bryan Lacy</h5>
-                                                    <p class="text-muted">18 Friend suggest</p>
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="friends-suggestions-list">
-                                            <div class="position-relative">
-                                                <div class="float-left mb-0 mr-3">
-                                                    <img src="{% static 'images/users/user-6.jpg' %}" alt="" class="rounded-circle thumb-md">
-                                                </div>
-                                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                                    <i class="mdi mdi-plus"></i>
-                                                </div>
-
-                                                <div class="desc">
-                                                    <h5 class="font-14 mb-1 pt-2 text-dark">James Sorrells</h5>
-                                                    <p class="text-muted mb-1">6 Friend suggest</p>
-                                                </div>
-                                            </div>
-                                        </a>
-
+                                            <button class="countryBtn active" id="indian-btn">INDIAN</button>
+                                            <button class="countryBtn non_indian" id="non-indian-btn">NOT INDIAN</button>
+                                        </div>
+                                      </form>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4">
-                            <div class="card m-b-30">
-                                <div class="card-body">
-                                    <h4 class="mt-0 header-title mb-4">Sales Analytics</h4>
-                                    <div id="morris-line-example" class="morris-chart" style="height: 360px"></div>
-
+                                <div class="col-12">
+                                    <div class="d-flex gap-3 mt-2">
+                                      <div class="custom_amount flexBoxCenter">
+                                          <div class="title fw-bold">Custom Amount:</div>
+                                          <div class="amount">
+                                            <input id="number" type="text" />
+                                          </div>
+                                      </div>
+                                      <div class="currency">
+                                          <span class="f-14 fw-semibold">Currency</span>
+                                          <div class="inrSelect">
+                                            <select class="h-100">
+                                                <option value="IN">INR</option>
+                                                <option value="US">USD</option>
+                                                <option value="UK">$</option>
+                                            </select>
+                                          </div>
+                                      </div>
+                                    </div>
                                 </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-xl-4">
-                            <div class="card m-b-30">
-                                <div class="card-body">
-
-                                    <h4 class="mt-0 header-title mb-4">Recent Activity</h4>
-                                    <ol class="activity-feed mb-0">
-                                        <li class="feed-item">
-                                            <div class="feed-item-list">
-                                                <p class="text-muted mb-1">Now</p>
-                                                <p class="font-15 mt-0 mb-0">Andrei Coman magna sed porta finibus, risus posted a new article: <b class="text-primary">Forget UX Rowland</b></p>
+                                <div class="col-md-5 pt-1">
+                                    <div class="d-flex align-items-center messageBox gap-2">
+                                      <input type="checkbox" class="donationMessage position-relative" id="anonymous2">
+                                      <label class="f-14 m-0 py-1 form-check-label" for="anonymous2">
+                                        Make my Donation Anonymous
+                                      </label>
+                                    </div>
+                                    <div class="d-flex align-items-center messageBox gap-2">
+                                      <input type="checkbox" class="donationMessage position-relative"  id="whatsapp2">
+                                      <label class="f-14 m-0 py-1 form-check-label" for="whatsapp2">
+                                        I want to receive transaction and donation updates on WhatsApp
+                                      </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 pt-1">
+                                    <div class=" messageBox">
+                                      <div class="d-flex align-items-center gap-2">
+                                          <input type="checkbox" class="donationMessage gap-2 position-relative"  id="request">
+                                          <label class="f-14 m-0 py-1 form-check-label" for="request">
+                                            Request 80 G
+                                          </label>
+                                      </div>
+                                      <div class="monthly_donate d-flex align-items-center">
+                                          <div class="monthly d-flex align-items-center justify-content-between">
+                                            <button class="btn messageBox flexBoxCenter gap-2 fw-bold">
+                                              <input type="checkbox" class="md_btn donationMessage position-relative"  id="donateMOnthly2">
+                                              <label class="f-14 m-0 py-1 form-check-label" for="donateMOnthly2">
+                                                Donate Monthly
+                                              </label>
+                                            </button>
+                                            <div class="d-flex flex-column align-items-end">
+                                                <span class="f-14 fw-bold">TOTAL AMOUNT</span>
+                                                <span class="f-27 color-12 fw-bold" style="line-height:normal">RS. 1,160</span>
                                             </div>
-                                        </li>
-                                        <li class="feed-item">
-                                            <p class="text-muted mb-1">Yesterday</p>
-                                            <p class="font-15 mt-0 mb-0">Andrei Coman posted a new article: <b class="text-primary">Designer Alex</b></p>
-                                        </li>
-                                        <li class="feed-item">
-                                            <p class="text-muted mb-1">2:30PM</p>
-                                            <p class="font-15 mt-0 mb-0">Zack Wetass, sed porta finibus, risus  Chris Wallace Commented <b class="text-primary"> Developer Moreno</b></p>
-                                        </li>
-                                        <li class="feed-item pb-1">
-                                            <p class="text-muted mb-1">12:48 PM</p>
-                                            <p class="font-15 mt-0 mb-2">Zack Wetass, Chris Wallace Commented <b class="text-primary">UX Murphy</b></p>
-                                        </li>
-
-                                    </ol>
-
+                                          </div>
+                                      </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="col-12">
+                                    <div class="dSubmit pt-2">
+                                      <button class="btn btnPink fw-bold btnAnimation">DONATE NOW</button>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
                         </div>
                     </div>
+                  </div>
+              </div>
+            </div>
+            <div class="knowMore_donateModel">
+              <div class="modal fade" id="knowMoredonate2"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="knowMoredonate2Label2" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title fw-bold w-100 f-24">Feeding Cows</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="learnMore_donate" id="learnMoreSlide">
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="social_wr d-flex gap-1 flex-wrap">
+                                  <div class="facebook ">
+                                    <a href="#" class="py-2 px-3 fw-bold f-14">Facebook</a href="#">
+                                  </div>
+                                  <div class="instagram ">
+                                    <a href="#" class="py-2 px-3 fw-bold f-14">Instagram</a href="#">
+                                  </div>
+                                  <div class="whatsapp ">
+                                    <a href="#" class="py-2 px-3 fw-bold f-14">Whatsapp</a href="#">
+                                  </div>
+                                  <div class="twitter ">
+                                    <a href="#" class="py-2 px-3 fw-bold f-14">Twitter</a href="#">
+                                  </div>
+                              </div>
+                              <h4 class="display-5 color-27 fw-semibold">Donor Privileges</h4>
+                              <div class="pt-3 pt-lg-0">
+                                <ol class="f-14 fw-medium">
+                                  <li class=" color-27 lineHeight-30">
+                                    Gau Puja on your name
+                                  </li>
+                                  <li class=" color-27 lineHeight-30">
+                                    Digital Certificate of Your Goseva Contribution
+                                  </li>
+                                  <li class=" color-27 lineHeight-30">
+                                    80G Tax Exemption Certificate
+                                  </li>
+                                  <li class=" color-27 lineHeight-30">
+                                    On donating 11000 & above you will get 100% Pure Products from our gaushala.
+                                  </li>
+                                </ol>
+                              </div>
+                              <div>
+                                <div class="share text-center mb-2">
+                                  <div class=" share_btn flexBoxCenter d-inline-block">
+                                    <button class="btn p-2">
+                                      <img class="img-fluid width-20" src="assets/images/home/share.png'  %}" alt="share">
+                                      <span class=" color-27 fw-semibold">Share</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="desc_wr">
+                                  <h6 class="fw-semibold">Cows in Divine Protection</h6>
+                                  <p>
+                                    In the lore of Krishna, cows symbolize purity and abundance, receiving divine protection. Their care is integral to sustaining balance and harmony in the cosmic order, reflecting Krishna's compassionate guardianship.
+                                  </p>
+                                  <button class="btnAnimation">
+                                    <img class="img-fluid width-20 me-1" src="assets/images/home/favorite.png'  %}" alt="favorite">
+                                    Donate
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+           <!-- Modal 2 -->
 
-                    <!-- START ROW -->
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="card m-b-30">
-                                <div class="card-body">
-                                    <h4 class="mt-0 header-title mb-4">Active Deals</h4>
-                                    <div class="table-responsive">
-                                        <table class="table table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">Amount</th>
-                                                    <th scope="col">Contact</th>
-                                                    <th scope="col">Location</th>
-                                                    <th scope="col" colspan="2">Date</th>
-
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Philip Smead</td>
-                                                    <td><span class="badge badge-success">Delivered</span></td>
-                                                    <td>$9,420,000</td>
-                                                    <td>
-                                                        <div>
-                                                            <img src="{% static 'images/users/user-2.jpg' %}" alt="" class="thumb-md rounded-circle mr-2"> Philip Smead
-                                                        </div>
-                                                    </td>
-                                                    <td>Houston, TX 77074</td>
-                                                    <td>15/1/2018</td>
-
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Brent Shipley</td>
-                                                    <td><span class="badge badge-warning">Pending</span></td>
-                                                    <td>$3,120,000</td>
-                                                    <td>
-                                                        <div>
-                                                            <img src="{% static 'images/users/user-3.jpg' %}" alt="" class="thumb-md rounded-circle mr-2"> Brent Shipley
-                                                        </div>
-                                                    </td>
-                                                    <td>Oakland, CA 94612</td>
-                                                    <td>16/1/2019</td>
-
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Robert Sitton</td>
-                                                    <td><span class="badge badge-success">Delivered</span></td>
-                                                    <td>$6,360,000</td>
-                                                    <td>
-                                                        <div>
-                                                            <img src="{% static 'images/users/user-4.jpg' %}" alt="" class="thumb-md rounded-circle mr-2"> Robert Sitton
-                                                        </div>
-                                                    </td>
-                                                    <td>Hebron, ME 04238</td>
-                                                    <td>17/1/2019</td>
-
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Alberto Jackson</td>
-                                                    <td><span class="badge badge-danger">Cancel</span></td>
-                                                    <td>$5,200,000</td>
-                                                    <td>
-                                                        <div>
-                                                            <img src="{% static 'images/users/user-5.jpg' %}" alt="" class="thumb-md rounded-circle mr-2"> Alberto Jackson
-                                                        </div>
-                                                    </td>
-                                                    <td>Salinas, CA 93901</td>
-                                                    <td>18/1/2019</td>
-
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>David Sanchez</td>
-                                                    <td><span class="badge badge-success">Delivered</span></td>
-                                                    <td>$7,250,000</td>
-                                                    <td>
-                                                        <div>
-                                                            <img src="{% static 'images/users/user-6.jpg' %}" alt="" class="thumb-md rounded-circle mr-2"> David Sanchez
-                                                        </div>
-                                                    </td>
-                                                    <td>Cincinnati, OH 45202</td>
-                                                    <td>19/1/2019</td>
-
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+            <!-- Modal 3 -->
+            <div class="donateModel">
+              <div class="modal fade" id="donate3"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="donate1Label3" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title fw-bold w-100 f-24">Feeding Cows</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="donateSilde" id="donateSlide">
+                              <div class="row zIndex-3 donationForm_wr">
+                                <div class="col-xl-6 col-lg-7">
+                                    <div class="card_donate d-flex flex-row gap-2 mb-2">
+                                      <img src="assets/images/home/steel.png'  %}" class="card-img-top img-fluid" alt="Steel Structure Seva">
+                                      <div class="card-body d-flex flex-row gap-2">
+                                          <div>
+                                            <h5 class="card-title fw-bold">Steel Structure Seva</h5>
+                                            <p class="card-text f-12">Welcome abandoned cows to a safe haven with sturdy steel structures offering shelter and care. Join us in creating their sanctuary.</p>
+                                          </div>
+                                          <div class="flex-shrink-0">
+                                            <button class="btn btn-primary f-12">Add +</button>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                          </div>
+                                      </div>
                                     </div>
-
+                                    <div class="card_donate d-flex flex-row gap-2 mb-2">
+                                      <img src="assets/images/home/concrete.png'  %}" class="card-img-top img-fluid" alt="concrete Seva">
+                                      <div class="card-body d-flex flex-row gap-2">
+                                          <div>
+                                            <h5 class="card-title fw-bold">Concrete Seva</h5>
+                                            <p class="card-text f-12">A solid sanctuary for abandoned cows. Join us in building their haven with sturdy structures, offering shelter and care to these gentle beings.</p>
+                                          </div>
+                                          <div class="flex-shrink-0">
+                                            <button class="btn btn-primary f-12">Add +</button>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <div class="card_donate d-flex flex-row gap-2 mb-2">
+                                      <img src="assets/images/home/cement.png'  %}" class="card-img-top img-fluid" alt="cement Seva">
+                                      <div class="card-body d-flex flex-row gap-2">
+                                          <div>
+                                            <h5 class="card-title fw-bold">Cement Seva</h5>
+                                            <p class="card-text f-12"> A reliable sanctuary for abandoned cows. Join us in constructing their haven with sturdy structures, providing shelter and care to these gentle beings.</p>
+                                          </div>
+                                          <div class="flex-shrink-0">
+                                            <button class="btn btn-primary f-12">Add +</button>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <div class="card_donate d-flex flex-row gap-2">
+                                      <img src="assets/images/home/aggregate.png'  %}" class="card-img-top img-fluid" alt="Aggregate Seva">
+                                      <div class="card-body d-flex flex-row gap-2">
+                                          <div>
+                                            <h5 class="card-title fw-bold">Aggregate Seva</h5>
+                                            <p class="card-text f-12">  A reliable sanctuary for abandoned cows. Join us in constructing their haven with sturdy structures, providing shelter and care to these gentle beings.</p>
+                                          </div>
+                                          <div class="flex-shrink-0">
+                                            <button class="btn btn-primary f-12 bg-dark text-white">
+                                            Added 
+                                            <img src="assets/images/home/done_all.png'  %}" class="card-img-top img-fluid" style="width:auto; height:16px" alt="done">
+                                            </button>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-5 mt-2 mt-lg-0">
+                                    <div class="card_donate fw-medium zIndex-3 position-relative">
+                                      <p class="mb-1 f-14">
+                                          By supporting <span class="color-26 fw-bold">Hingonia</span>, you are helping us reach out to more campaigns like this and scale our impact. <a href="#" class="color-26 text-decoration-underline fw-bold">Learn More.</a>
+                                      </p>
+                                      <div class="d-flex justify-content-between">
+                                          <span class="f-12 fw-bold">Support us by :</span>
+                                          <span class="supportPer f-12 fw-bold px-1" style="background:#F5F5F5; border:2px inset #0000001c; border-radius: 5px">
+                                            <select class="h-100">
+                                              <option value="IN">16% (₹160)</option>
+                                              <option value="US">22% (₹200)</option>
+                                            </select>
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div class="donateForm_wr py-3">
+                                      <form onsubmit="return false">
+                                          <div class="mb-3 position-relative">
+                                            <label for="nameInput" class="form-label position-absolute f-12 fw-medium">Name</label>
+                                            <input type="text" class="form-control" placeholder="Srimaan Nivas" id="nameInput" aria-describedby="nameHelp">
+                                          </div>
+                                          <div class="mb-3 position-relative">
+                                            <label for="emailInput" class="form-label position-absolute f-12 fw-medium">Email</label>
+                                            <input type="text" class="form-control" placeholder="nivaashri@gmail.com" id="emailInput" aria-describedby="emailHelp">
+                                          </div>
+                                          <div class="mb-3 position-relative">
+                                            <div class="position-absolute country_code h-100">
+                                                <select class="h-100">
+                                                  <option value="IN">IN</option>
+                                                  <option value="US">US</option>
+                                                  <option value="UK">UK</option>
+                                                </select>
+                                            </div>
+                                            <label for="nameInput" class="form-label position-absolute f-12 fw-medium">Number</label>
+                                            <input type="text" class="phone-number w-100" placeholder="+91 00000-00000">
+                                            <div class="help-icon position-absolute flexBoxCenter" title="Enter your mobile number including the country code.">?</div>
+                                          </div>
+                                          <div class="donate_CountryBtn">
+                                          <div class="donate_CountryBtn d-flex align-items-center">
+                                            <div>
+                                                <input class="checkBox form-check-input" type="radio" name="nationality" id="nationality">
+                                                <label class="form-check-label fw-bold" for="nationality">Nationality</label>
+                                            </div>
+                                            <button class="countryBtn active" id="indian-btn">INDIAN</button>
+                                            <button class="countryBtn non_indian" id="non-indian-btn">NOT INDIAN</button>
+                                        </div>
+                                          </div>
+                                      </form>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex gap-3 mt-2">
+                                      <div class="custom_amount flexBoxCenter">
+                                          <div class="title fw-bold">Custom Amount:</div>
+                                          <div class="amount">
+                                            <input id="number" type="text" />
+                                          </div>
+                                      </div>
+                                      <div class="currency">
+                                          <span class="f-14 fw-semibold">Currency</span>
+                                          <div class="inrSelect">
+                                            <select class="h-100">
+                                                <option value="IN">INR</option>
+                                                <option value="US">USD</option>
+                                                <option value="UK">$</option>
+                                            </select>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 pt-1">
+                                    <div class="d-flex align-items-center messageBox gap-2">
+                                      <input type="checkbox" class="donationMessage position-relative" id="anonymous2">
+                                      <label class="f-14 m-0 py-1 form-check-label" for="anonymous2">
+                                        Make my Donation Anonymous
+                                      </label>
+                                    </div>
+                                    <div class="d-flex align-items-center messageBox gap-2">
+                                      <input type="checkbox" class="donationMessage position-relative"  id="whatsapp">
+                                      <label class="f-14 m-0 py-1 form-check-label" for="whatsapp">
+                                        I want to receive transaction and donation updates on WhatsApp
+                                      </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 pt-1">
+                                    <div class=" messageBox">
+                                      <div class="d-flex align-items-center gap-2">
+                                          <input type="checkbox" class="donationMessage gap-2 position-relative"  id="request">
+                                          <label class="f-14 m-0 py-1 form-check-label" for="request">
+                                            Request 80 G
+                                          </label>
+                                      </div>
+                                      <div class="monthly_donate d-flex align-items-center">
+                                          <div class="monthly d-flex align-items-center justify-content-between">
+                                            <button class="btn messageBox flexBoxCenter gap-2 fw-bold">
+                                              <input type="checkbox" class="md_btn donationMessage position-relative"  id="donateMOnthly2">
+                                              <label class="f-14 m-0 py-1 form-check-label" for="donateMOnthly2">
+                                                Donate Monthly
+                                              </label>
+                                            </button>
+                                            <div class="d-flex flex-column align-items-end">
+                                                <span class="f-14 fw-bold">TOTAL AMOUNT</span>
+                                                <span class="f-27 color-12 fw-bold" style="line-height:normal">RS. 1,160</span>
+                                            </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="dSubmit pt-2">
+                                      <button class="btn btnPink fw-bold btnAnimation">DONATE NOW</button>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="knowMore_donateModel">
+              <div class="modal fade" id="knowMoredonate3"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="knowMoredonate3Label2" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title fw-bold w-100 f-24">Feeding Cows</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="learnMore_donate" id="learnMoreSlide">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="social_wr d-flex gap-1 flex-wrap">
+                                <div class="facebook ">
+                                  <a href="#" class="py-2 px-3 fw-bold f-14">Facebook</a href="#">
+                                </div>
+                                <div class="instagram ">
+                                  <a href="#" class="py-2 px-3 fw-bold f-14">Instagram</a href="#">
+                                </div>
+                                <div class="whatsapp ">
+                                  <a href="#" class="py-2 px-3 fw-bold f-14">Whatsapp</a href="#">
+                                </div>
+                                <div class="twitter ">
+                                  <a href="#" class="py-2 px-3 fw-bold f-14">Twitter</a href="#">
                                 </div>
                             </div>
+                            <h4 class="display-5 color-27 fw-semibold">Donor Privileges</h4>
+                            <div class="pt-3 pt-lg-0">
+                              <ol class="f-14 fw-medium">
+                                <li class=" color-27 lineHeight-30">
+                                  Gau Puja on your name
+                                </li>
+                                <li class=" color-27 lineHeight-30">
+                                  Digital Certificate of Your Goseva Contribution
+                                </li>
+                                <li class=" color-27 lineHeight-30">
+                                  80G Tax Exemption Certificate
+                                </li>
+                                <li class=" color-27 lineHeight-30">
+                                  On donating 11000 & above you will get 100% Pure Products from our gaushala.
+                                </li>
+                              </ol>
+                            </div>
+                            <div>
+                              <div class="share text-center mb-2">
+                                <div class=" share_btn flexBoxCenter d-inline-block">
+                                  <button class="btn p-2">
+                                    <img class="img-fluid width-20" src="assets/images/home/share.png'  %}" alt="share">
+                                    <span class=" color-27 fw-semibold">Share</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="desc_wr">
+                                <h6 class="fw-semibold">Cows in Divine Protection</h6>
+                                <p>
+                                  In the lore of Krishna, cows symbolize purity and abundance, receiving divine protection. Their care is integral to sustaining balance and harmony in the cosmic order, reflecting Krishna's compassionate guardianship.
+                                </p>
+                                <button class="btnAnimation">
+                                  <img class="img-fluid width-20 me-1" src="assets/images/home/favorite.png'  %}" alt="favorite">
+                                  Donate
+                                </button>
+                            </div>
+                          </div>
                         </div>
-
+                      </div>
                     </div>
-                    <!-- END ROW -->
+                  </div>
+                </div>
+              </div>
+            </div>
+           <!-- Modal 3 -->
+
+          <!-- Model -->
+        </div>
+      </section>
+      <section class="mx-2 py-5 donation_section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 ">
+              <div class="px-lg-5 px-md-3 position-relative">
+                <h2 class="fw-bold display-2 color-4 donation_titleWr ">
+                  don’t be
+                  <Span class="longLine">
+                    silent
+                  </Span>
+                  for the
+                  <Span class="color-13">
+                    silent
+                  </Span>
+                  , help our sacred animal
+                </h2>
+                <div class="d-flex donation_lineWr">
+                  <div class="donate_wr d-flex">
+                    <div>
+                      <img class="img-fluid" src="{% static 'images/home/line.png'  %}" alt="line">
+                      <div class="d-flex donation_content">
+                        <div class="d-flex gap-1">
+                          <div class="hashTag flexBoxCenter">
+                            #
+                          </div>
+                          <div>
+                            Feedcows
+                          </div>
+                        </div>
+                        <div class="d-flex gap-1">
+                          <div class="hashTag flexBoxCenter">
+                            #
+                          </div>
+                          <div>
+                            Feedcows
+                          </div>
+                        </div>
+                        <div class="d-flex gap-1">
+                          <div class="hashTag flexBoxCenter">
+                            #
+                          </div>
+                          <div>
+                            Feedcows
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="position-relative email-container text-center">
+                      <img class="img-fluid position-absolute email-cover" src="{% static 'images/home/email-cover' %}" alt="email cover">
+                      <img class="img-fluid email-body" src="{% static 'images/home/email.jpg" alt="email">
+                      <a href="#" class="text-decoration-underline text-dark fw-semibold f-14">Donate Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mx-2 py-2 px-lg-5 px-md-0 mx-lg-4">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="swiper testimonialsSwiper pt-60">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide ">
+                    <div class="testimonials_content_wr rounded-5 overflow-hidden">
+                      <div>
+                        <img src="assets/images/home/Profil-picture.jpg" class="Profil-picture img-fluid"
+                        alt="Profil-picture">
+                      </div>
+                      <div class="p-3 pb-5">
+                        <h4 class="testimonial_title fw-bold">
+                          HH Stoka Krishna Swami
+                        </h4>
+                        <h4 class="testimonial_Subtitle color-15 mb-3">
+                          President ISKCON Mysore
+                        </h4>
+                        <p class="hs-desc">
+                          Very dedicated devotees who care very nicely for the cows. The staff is
+                          also dedicated to work diligently for upkeep of the place.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide ">
+                    <div class="testimonials_content_wr rounded-5 overflow-hidden">
+                      <div>
+                        <img src="assets/images/home/Profil-picture.jpg" class="Profil-picture img-fluid"
+                        alt="Profil-picture">
+                      </div>
+                      <div class="p-3 pb-5">
+                        <h4 class="testimonial_title fw-bold">
+                          HH Stoka Krishna Swami
+                        </h4>
+                        <h4 class="testimonial_Subtitle color-15 mb-3">
+                          President ISKCON Mysore
+                        </h4>
+                        <p class="hs-desc">
+                          Very dedicated devotees who care very nicely for the cows. The staff is
+                          also dedicated to work diligently for upkeep of the place.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide ">
+                    <div class="testimonials_content_wr rounded-5 overflow-hidden">
+                      <div>
+                        <img src="assets/images/home/Profil-picture.jpg" class="Profil-picture img-fluid"
+                        alt="Profil-picture">
+                      </div>
+                      <div class="p-3 pb-5">
+                        <h4 class="testimonial_title fw-bold">
+                          HH Stoka Krishna Swami
+                        </h4>
+                        <h4 class="testimonial_Subtitle color-15 mb-3">
+                          President ISKCON Mysore
+                        </h4>
+                        <p class="hs-desc">
+                          Very dedicated devotees who care very nicely for the cows. The staff is
+                          also dedicated to work diligently for upkeep of the place.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide ">
+                    <div class="testimonials_content_wr rounded-5 overflow-hidden">
+                      <div>
+                        <img src="assets/images/home/Profil-picture.jpg" class="Profil-picture img-fluid"
+                        alt="Profil-picture">
+                      </div>
+                      <div class="p-3 pb-5">
+                        <h4 class="testimonial_title fw-bold">
+                          HH Stoka Krishna Swami
+                        </h4>
+                        <h4 class="testimonial_Subtitle color-15 mb-3">
+                          President ISKCON Mysore
+                        </h4>
+                        <p class="hs-desc">
+                          Very dedicated devotees who care very nicely for the cows. The staff is
+                          also dedicated to work diligently for upkeep of the place.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide ">
+                    <div class="testimonials_content_wr rounded-5 overflow-hidden">
+                      <div>
+                        <img src="assets/images/home/Profil-picture.jpg" class="Profil-picture img-fluid"
+                        alt="Profil-picture">
+                      </div>
+                      <div class="p-3 pb-5">
+                        <h4 class="testimonial_title fw-bold">
+                          HH Stoka Krishna Swami
+                        </h4>
+                        <h4 class="testimonial_Subtitle color-15 mb-3">
+                          President ISKCON Mysore
+                        </h4>
+                        <p class="hs-desc">
+                          Very dedicated devotees who care very nicely for the cows. The staff is
+                          also dedicated to work diligently for upkeep of the place.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="arrowsBtn_wr flexBoxCenter">
+                  <div class="swiper-button-prev">
+                    <img src="{% static 'images/home/arrow_back.png'  %}" alt="arrow_back">
+                  </div>
+                  <div class="fw-bold" style="margin-top:-21px">
+                    Testimonials
+                  </div>
+                  <div class="swiper-button-next">
+                    <img src="{% static 'images/home/arrow_next.png'  %}" alt="arrow_next">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mx-2 py-5 px-lg-5 px-md-0 mx-lg-5 csr-supporters-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="heart_wr text-center">
+                <img class="img-fluid" src="{% static 'images/home/icon-heart.png'  %}" alt="heart">
+              </div>
+              <div>
+                <h1 class="text-center display-2 csr_supporter_title color-10 fw-medium">
+                  Visibility To Our
+                  <span class="fw-bold color-10 ff-antom">
+                    CSR Supporters
+                  </span>
+                </h1>
+                <p class="color-10 text-justify donor_desc">
+                Donor's registered logo and name will be prominently displayed in form
+                of hoardings & facades in the sponsored area ensuring brand visibility
+                to the visitors. The primary sponsor will be given the maximum visibility
+                on the exterior facade and rest of the supporters will be provided with
+                a specified space termed as the donor wall.
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="csr_supporter_content ps-0 ps-lg-5">
+                <div>
+                  <div thumbsSlider="" class="swiper CSRSwiper">
+                    <div class="swiper-wrapper">
+                      <!-- Swiper slides with images -->
+                      <div class="swiper-slide"><img src="{% static 'images/home/csr-01.png'  %}" alt="RSDCL"></div>
+                      <div class="swiper-slide"><img src="{% static 'images/home/csr-02.png'  %}" alt="RIICO"></div>
+                      <div class="swiper-slide"><img src="{% static 'images/home/csr-03.png'  %}" alt=""></div>
+                      <div class="swiper-slide"><img src="{% static 'images/home/csr-04.png'  %}" alt=""></div>
+                      <div class="swiper-slide"><img src="{% static 'images/home/csr-05.png'  %}" alt=""></div>
+                      <div class="swiper-slide"><img src="{% static 'images/home/csr-06.png'  %}" alt=""></div>
+                    </div>
+                  </div>
+                  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper CSRSwiper2">
+                    <div class="swiper-wrapper">
+                      <!-- Swiper slides with images and text content -->
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="{% static 'images/home/csr-gallery/1.png'  %}" />
+                        <h4 class="text-center fw-bold f-28 mb-0 mt-4 color-10 text-uppercase" >RSDCL</h4>
+                        <div>
+                          <p class="my-3">The number of cows here has grown to over 18,000, making it challenging to feed them on time. Rajasthan Solarpark Development Company Limited (RSDCL) has helped by providing a TMR (Total Mixed Ration) Fodder Feeding Machine that mixes green fodder, dry fodder, and concentrate, ensuring all cows get equal nutrition. With this machine, we can now feed 3,000 cows every day.</p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="{% static 'images/home/csr-gallery/2.png'  %}" />
+                        <h4 class="text-center fw-bold f-28 mb-0 mt-4 color-10 text-uppercase" >RIICO</h4>
+                        <div>
+                          <p class="my-3">RIICO's CSR support has helped the Hingonia Cattle Rehabilitation Center in preserving soil and groundwater while promoting environmental sustainability. Their contribution of a dead animal incinerator machine ensures efficient waste management, reflecting RIICO's commitment to creating a healthier environment for all.</p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="{% static 'images/home/csr-gallery/3.png'  %}" />
+                        <h4 class="text-center fw-bold f-28 mb-0 mt-4 color-10 text-uppercase" >GCL</h4>
+                        <div>
+                          <p class="my-3">With the generous CSR support from Gayson & Company Limited, our Hingonia Cattle Rehabilitation Center was able to provide arrangements for 4,500 cows in a day, including dry fodder, green fodder, and concentrate. This support has been instrumental in our mission to serve the 18,000 cows in our care. We extend our heartfelt gratitude for their contribution towards our cause.</p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="{% static 'images/home/csr-gallery/4.png'  %}" />
+                        <h4 class="text-center fw-bold f-28 mb-0 mt-4 color-10 text-uppercase" >H.G.</h4>
+                        <p class="my-3">H.G. Foundation's generous support in building a 44,000 sqft shelter home for 500 stray and abandoned cows is truly commendable. The brick flooring ensures their comfort and safety, particularly during rainy days. Solar lights have been installed to provide care for the cows at night, especially the elderly and sick ones. Additionally, shade-providing trees have been planted to offer relief from the heat during hot weather, further enhancing their well-being.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="{% static 'images/home/csr-gallery/5.png'  %}" />
+                        <h4 class="text-center fw-bold f-28 mb-0 mt-4 color-10 text-uppercase" >IOCL</h4>
+                        <p class="my-3">Through the generous CSR contribution of the Indian Oil Corporation Limited, a state-of-the-art biogas plant with a capacity of 100 MTPD has been established within the Hingonia premises. This sustainable initiative underscores our commitment to environmental conservation and renewable energy utilization. The biogas is used to create a Porridge for the ill cows, and Akshaya Patra utilizes it for serving mid-day meals to 1.5 lakh students.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="{% static 'images/home/csr-gallery/6.png'  %}" />
+                        <h4 class="text-center fw-bold f-28 mb-0 mt-4 color-10 text-uppercase" >AFL</h4>
+                        <p class="my-3">Aavas Financiers Limited's support for the plantation of 2000 trees promotes sustainable agriculture and provides nutritious fruits for the cattle. The installation of a 200 KW solar grid power plant reduces electricity costs, reliance on non-renewable energy, and the carbon footprint. Brick flooring in the Nandi Shala improves hygiene, reduces infections, and enhances cattle well-being, showcasing Aavas's commitment to CSR.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center gap-3">
+                  <div class="csr_partnerbtn_wr flexBoxCenter flex-column gap-2">
+                    <div class="become_csrPartner">
+                      <button class="btn csrPartnerBtn bg-1 py-2 px-3 rounded-5 fw-bold">
+                        <a href="./csr.php" class="text-dark">Become a CSR Partner</a>
+                        <img class="ms-1" style="width:12px" src="{% static 'images/home/arrow-black-45.png'  %}" alt="Become CSR partner">
+                      </button>
+                      <span class="ps-2 pe-1 fw-medium ff-epilogue">Know More</span>
+                    </div>
+                    <span style="opacity:.5" class="fw-bold">Join Our CSR Initiatives</span>
+                  </div>
+                  <div class="view_testimonial_btnWr text-center mt-2">
+                    <div class="btn text-white fw-semibold view_testimonialBtn btnAnimation ff-epilogue">
+                      View Testimonial
+                      <img class="ms-1" style="width:12px" src="{% static 'images/home/arrow-45.png'  %}" alt="view testimonials">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home_gallery-section px-lg-5 px-md-0 mx-lg-5 mx-2 mb-0 mb-md-5 py-md-5 pt-md-0 py-3">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-5 ">
+              <div class="content">
+                <h2 class="display-3 fw-bold pe-lg-40">
+                  Some Glipses of
+                </h2>
+                <h2 class="color-1 display-1 ff-epilogue fw-bold">
+                  Hingonia
+                </h2>
+                <div class="ourGallery_btn position-relative d-inline-block">
+                  <img class="img-fluid" src="{% static 'images/home/our-gallery.png'  %}" alt="our-gallery">
+                  <button class="btnAnimation position-absolute text-white fw-bold">
+                    Our Gallery
+                    <img src="{% static 'images/home/arrow_next.png'  %}" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+            <div class="swiper gallerySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="img-fluid gallery-1" src="{% static 'images/home/gallery/gallery-1.png'  %}" alt="gallery">
+                </div>
+                <div class="swiper-slide">
+                  <img class="img-fluid gallery-2" src="{% static 'images/home/gallery/gallery-2.png'  %}" alt="gallery">
+                </div>
+                <div class="swiper-slide">
+                  <img class="img-fluid gallery-3" src="{% static 'images/home/gallery/gallery-3.png'  %}" alt="gallery">
+                </div>
+                <div class="swiper-slide">
+                  <img class="img-fluid gallery-4" src="{% static 'images/home/gallery/gallery-4.png'  %}" alt="gallery">
+                </div>
+              </div>
+            </div>
+                <div style="opacity:.5" class="pt-1 text-center fw-bold">
+                  Click to see more
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="donor_privilages-section mx-2 mb-5 py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-6 offset-xl-1">
+              <div class="donat_event_wr">
+                <div class="event_Wr p-4 text-center">
+                  <h5 class="text-white fw-bold">
+                    Make Your Own Day Of Charity
+                  </h5>
+                  <p class="text-white" style="font-size:11px">
+                    Add goodwill to your special occations by spreading joy among those who
+                    need your and support the most
+                  </p>
+                  <div class="event_type flexBoxCenter justify-content-between">
+                    <div class="eventBox flexBoxCenter flex-column active" onclick="selectEvent(this)">
+                        <img src="{% static 'images/home/anniversary.png'  %}" alt="">
+                        <input type="checkbox" class="eventCheckbox" checked>
+                        <span class="f-12 fw-bold">Anniversary</span>
+                    </div>
+                    <div class="eventBox flexBoxCenter flex-column" onclick="selectEvent(this)">
+                        <img src="{% static 'images/home/birthday.png'  %}" alt="">
+                        <input type="checkbox" class="eventCheckbox">
+                        <span class="f-12 fw-bold">Birthday</span>
+                    </div>
+                    <div class="eventBox flexBoxCenter flex-column" onclick="selectEvent(this)">
+                        <img src="{% static 'images/home/honour-of.png'  %}" alt="">
+                        <input type="checkbox" class="eventCheckbox">
+                        <span class="f-12 fw-bold">In Honour Of</span>
+                    </div>
+                    <div class="eventBox flexBoxCenter flex-column" onclick="selectEvent(this)">
+                        <img src="{% static 'images/home/memory-of.png'  %}" alt="">
+                        <input type="checkbox" class="eventCheckbox">
+                        <span class="f-12 fw-bold">In Memory Of</span>
+                    </div>
+                  </div>
 
                 </div>
-                <!-- container-fluid -->
-
+                <button class="btn donate_nowBtn mt-2 text-white fw-bold">
+                  DONATE NOW
+                </button>
+              </div>
             </div>
-            <!-- content -->
-
-            <footer class="footer">
-                © 2019 - 2020 Stexo <span class="d-none d-sm-inline-block"> - Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesdesign</span>.
-            </footer>
-
+            <div class="col-xl-4 col-lg-6">
+              <div class="donarPrivilages_point pt-3 pt-lg-0">
+                <h3 class="color-17 fw-bold">
+                  Donor Privileges
+                </h3>
+                <ol class="f-14 fw-medium lh-lg">
+                  <li class="color-17">
+                     Gau Puja on your name 
+                  </li>
+                  <li class="color-17">
+                    Digital Certificate of Your Goseva Contribution
+                  </li>
+                  <li class="color-17">
+                    80G Tax Exemption Certificate
+                  </li>
+                  <li class="color-17">
+                    On donating 11000 & above you will get 100% Pure Products from our gaushala.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- End Right content here -->
-        <!-- ============================================================== -->
-
-    </div>
-    <!-- END wrapper -->
-
-    <!-- jQuery  -->
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'js/metismenu.min.js' %}"></script>
-    <script src="{% static 'js/jquery.slimscroll.js' %}"></script>
-    <script src="{% static 'js/waves.min.js' %}"></script>
-
-    <!--Morris Chart-->
-    <script src="{% static 'morris/morris.min.js' %}"></script>
-    <script src="{% static 'raphael/raphael.min.js' %}"></script>
-
-    <script src="{% static 'pages/dashboard.init.js' %}"></script>
-
-    <!-- App js -->
-    <script src="{% static 'js/app.js' %}"></script>
-
-</body>
-
-</html>
+      </section>
+       
+  {% include 'footer.html' %}

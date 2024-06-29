@@ -1,0 +1,82 @@
+{% load static %}
+<header class="sticky-header animate px-2 pt-2">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-top-4">
+    <div class="container-fluid px-md-5 d-block">
+      <div class="row align-items-center g-md-3">
+        <div class="col-lg-5 col-md-8 col-6">
+          <a class="ff-epilogue" href="./">
+            <span class="mb-0 color-1 fw-bold fs-4">Hingonia.org</span>
+          </a>
+          <span class="text-white ff-epilogue d-md-inline d-none">/
+            <img src="{% static 'images/skbt-logo.webp' %}" width="25" alt="">
+            Sri Krishna Balram Seva Trust
+          </span>
+        </div>
+        <div class="col-lg-4 col-md-4 text-lg-center text-end col-6">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" href="#offcanvasHeader" role="button"
+            aria-controls="offcanvasHeader">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./our-work.php">Seva</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./trustees.php">Truestees</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.php">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./gallery.php">Gallery</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12 text-lg-end text-center pt-3 pt-md-0">
+          <a href="./csr.php" class="fw-bold text-decoration-underline nav-link">Get Involved</a>
+          <a href="#" class="btn btn-light cm-btn-light fw-bold rounded-pill ms-md-3 ms-1">Donate Now</a>
+          <a href="#" class="btn "><i class="bi bi-person-circle text-white fs-4"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasHeader"
+  aria-labelledby="offcanvasHeaderLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title color-1 fs-4 fw-bold" id="offcanvasHeaderLabel">Hingonia.org</h5>
+    <a href="javascript:void(0)" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="bi bi-x-circle text-white fs-2"></i>
+    </a>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <img src="assets/images/skbt-logo.webp" width="150" alt="">
+      <p class="text-white ff-epilogue mb-0 mt-4 fw-bold">
+        Sri Krishna Balram Seva Trust
+      </p>
+      <hr class="border-light">
+    </div>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Teams</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Client</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</div>

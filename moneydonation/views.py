@@ -21,12 +21,12 @@ def LoginView(request):
             return redirect('index')
     return render (request, 'login.html')
 
-@login_required(login_url='/login')   
+# @login_required(login_url='/login')   
 def index(request):
-    try:
-        return render(request, 'index.html')
-    except:
-         return HttpResponse({'msg':'server is upgrading'})
+   # try:
+    return render(request, 'index.html')
+    # except:
+    #      return HttpResponse({'msg':'server is upgrading'})
 
 @login_required(login_url='/login')
 def UploadImgGallery(request):
