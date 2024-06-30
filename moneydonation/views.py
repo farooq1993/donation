@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from .models import UploadMedia
 from .forms import UploadForm
@@ -9,6 +9,13 @@ from django.conf import settings
 from django.contrib.auth import authenticate,login,logout
 # Create your views here.
 
+
+# @login_required(login_url='/login')   
+def index(request):
+    #try:
+    return render(request, 'index.html')
+    # except:
+    #      return JsonResponse({'msg':'server is upgrading'})
 
 def LoginView(request):
     if request.method == 'POST':
@@ -21,12 +28,7 @@ def LoginView(request):
             return redirect('index')
     return render (request, 'login.html')
 
-# @login_required(login_url='/login')   
-def index(request):
-   # try:
-    return render(request, 'index.html')
-    # except:
-    #      return HttpResponse({'msg':'server is upgrading'})
+
 
 @login_required(login_url='/login')
 def UploadImgGallery(request):
@@ -66,5 +68,42 @@ def UploadImgGallery(request):
 def get_gallery_data(request):
     data = UploadMedia.objects.all()
     return render(request, 'get_gallery.html', {'data': data})
+
+
+#show our work 
+def our_work(request):
+    try:
+        return render(request, 'our-work.html')
+    except:
+        return JsonResponse({"msg":"page not found"})
+
+
+#Trustee
+def trustee(request):
+    try:
+        return render(request, 'trustees.html')
+    except:
+        return JsonResponse({"msg":"page not found"})
+    
+#about
+def about(request):
+    try:
+        return render(request, 'about.html')
+    except:
+        return JsonResponse({"msg":"page not found"})
+
+#Gallery
+def gallery(request):
+    try:
+        return render(request, 'gallery.html')
+    except:
+        return JsonResponse({"msg":"page not found"})
+    
+#Get involved
+def get_involved(request):
+    try:
+        return render(request, 'csr.html')
+    except:
+        return JsonResponse({"msg":"page not found"})
 
 

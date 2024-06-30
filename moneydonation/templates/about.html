@@ -1,13 +1,14 @@
-<?php require_once( 'includes/header.php'); ?>
-  
+{% include 'header.html' %}
+
+{% load static %}
   <body>
-    <?php require_once( 'includes/nav.php'); ?>
+    {% include 'nav.html' %}
       <!-- Section Banner -->
       <section class="about_banner mx-2 px-lg-5 position-relative">
         <div class="container-fluid">
             <div class="banner_contentWr d-flex align-items-center gap-3">
                 <div class="banner_icon">
-                    <img src="./assets/images/skbt-logo.png" alt="skbt">
+                    <img src="{% static 'images/skbt-logo.png' %}" alt="skbt">
                 </div>
                 <div class="banner_title text-white ">
                     <h1 class="fw-bold display-4">We are <span class="text-white fw-medium f-16">World’s largest Cow Rehabilitation Centre </span><br> Sri Krishna Balram seva trust</h1>
@@ -16,7 +17,7 @@
             </div>
         </div>
         <div class="vector_wr position-absolute">
-            <img class="img-fluid" src="./assets/images/about/banner-vector.png" alt="banner-vector">
+            <img class="img-fluid" src="{% static 'images/about/banner-vector.png' %}" alt="banner-vector">
         </div>
       </section>
       <section class="about_section pt-80">
@@ -86,9 +87,9 @@
       </section>
 
         <section class="our_partner position-relative">
-                <img src="assets/images/home/vector-1.png" class="element-1">
-                <img src="assets/images/home/vector-2.png" class="element-2">
-                <img src="assets/images/home/vector-3.png" class="element-3">
+                <img src="{% static 'images/home/vector-1.png' %}" class="element-1">
+                <img src="{% static 'images/home/vector-2.png' %}" class="element-2">
+                <img src="{% static 'images/home/vector-3.png' %}" class="element-3">
             <div class="ourPartner_section position-relative py-3">
                 <div class="container-fluid">
                     <div class="ourMission_title">
@@ -97,27 +98,27 @@
                     </div>
                     </div>
                 </div>
-                <img class="vector_left position-absolute img-fluid" src="./assets/images/about/vector-right.png" alt="vector">
-                <img class="vector_right position-absolute img-fluid" src="./assets/images/about/vector-left.png" alt="vector">
-                <div><img class="vector_cow position-absolute img-fluid" src="./assets/images/about/cow-1.png" alt="vector"></div>
+                <img class="vector_left position-absolute img-fluid" src="{% static 'images/about/vector-right.png' %}" alt="vector">
+                <img class="vector_right position-absolute img-fluid" src="{% static 'images/about/vector-left.png' %}" alt="vector">
+                <div><img class="vector_cow position-absolute img-fluid" src="{% static 'images/about/cow-1.png' %}" alt="vector"></div>
             </div>
             <div class="partner_pg text-white text-center position-relative">
                 <p class="text-center fw-medium text-white f-14">Sri Krishna Balaram Seva Trust</p>
                 <h3 class="display-5 text-center fw-bold">Our Partners</h3>
                 <div class="payment_options flexBoxCenter">
-                    <img class="img-fluid" src="./assets/images/about/sbi.png" alt="sbi">
-                    <img class="img-fluid" src="./assets/images/about/okay-plus.png" alt="okay-plus">
-                    <img class="img-fluid" src="./assets/images/about/heritage.png" alt="heritage">
-                    <img class="img-fluid" src="./assets/images/about/ssdcl.png" alt="ssdcl">
-                    <img class="img-fluid" src="./assets/images/about/indianoil.png" alt="indianoil">
-                    <img class="img-fluid" src="./assets/images/about/au.png" alt="au">
-                    <img class="img-fluid" src="./assets/images/about/aavas.png" alt="aavas">
-                    <img class="img-fluid" src="./assets/images/about/riico.png" alt="riico">
+                    <img class="img-fluid" src="{% static 'images/about/sbi.png' %}" alt="sbi">
+                    <img class="img-fluid" src="{% static 'images/about/okay-plus.png' %}" alt="okay-plus">
+                    <img class="img-fluid" src="{% static 'images/about/heritage.png' %}" alt="heritage">
+                    <img class="img-fluid" src="{% static 'images/about/ssdcl.png' %}" alt="ssdcl">
+                    <img class="img-fluid" src="{% static 'images/about/indianoil.png' %}" alt="indianoil">
+                    <img class="img-fluid" src="{% static 'images/about/au.png' %}" alt="au">
+                    <img class="img-fluid" src="{% static 'images/about/aavas.png' %}" alt="aavas">
+                    <img class="img-fluid" src="{% static 'images/about/riico.png' %}" alt="riico">
                 </div>
                 <div class="become_csrPartner">
                     <button class="btn csrPartnerBtn bg-1 py-2 px-3 rounded-5 fw-bold">
                     Contact Us
-                      <img class="ms-1" style="width:12px" src="./assets/images/home/arrow-black-45.png"
+                      <img class="ms-1" style="width:12px" src="{% static 'images/home/arrow-black-45.png' %}"
                       alt="Become CSR partner">
                     </button>
                       <a class="ps-2 pe-1 fw-medium ff-epilogue text-white" href="#">Know More</a>
@@ -144,16 +145,16 @@
                         <div class="swiper gallerySwiper">
                           <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                              <img class="img-fluid gallery-1" src="./assets/images/home/gallery/gallery-1.png" alt="gallery">
+                              <img class="img-fluid gallery-1" src="{% static 'images/home/gallery/gallery-1.png' %}" alt="gallery">
                             </div>
                             <div class="swiper-slide">
-                              <img class="img-fluid gallery-2" src="./assets/images/home/gallery/gallery-2.png" alt="gallery">
+                              <img class="img-fluid gallery-2" src="{% static 'images/home/gallery/gallery-2.png' %}" alt="gallery">
                             </div>
                             <div class="swiper-slide">
-                              <img class="img-fluid gallery-3" src="./assets/images/home/gallery/gallery-3.png" alt="gallery">
+                              <img class="img-fluid gallery-3" src="{% static 'images/home/gallery/gallery-3.png' %}" alt="gallery">
                             </div>
                             <div class="swiper-slide">
-                              <img class="img-fluid gallery-4" src="./assets/images/home/gallery/gallery-4.png" alt="gallery">
+                              <img class="img-fluid gallery-4" src="{% static 'images/home/gallery/gallery-4.png' %}" alt="gallery">
                             </div>
                           </div>
                         </div>
@@ -180,7 +181,7 @@
                             <div class="swiper-slide ">
                                 <div class="heavenCow_content_wr position-relative rounded-5 overflow-hidden">
                                 <div>
-                                    <img src="assets/images/about/heaven-card.png" class="Profil-picture img-fluid"
+                                    <img src="{% static 'images/about/heaven-card.png' %}" class="Profil-picture img-fluid"
                                     alt="Profil-picture">
                                 </div>
                                 <div class="card_desc position-absolute px-4 pb-2">
@@ -196,7 +197,7 @@
                             <div class="swiper-slide ">
                                 <div class="heavenCow_content_wr position-relative rounded-5 overflow-hidden">
                                 <div>
-                                    <img src="assets/images/about/heaven-card.png" class="Profil-picture img-fluid"
+                                    <img src="{% static 'images/about/heaven-card.png' %}" class="Profil-picture img-fluid"
                                     alt="Profil-picture">
                                 </div>
                                 <div class="card_desc position-absolute px-4 pb-2">
@@ -212,7 +213,7 @@
                             <div class="swiper-slide ">
                                 <div class="heavenCow_content_wr position-relative rounded-5 overflow-hidden">
                                 <div>
-                                    <img src="assets/images/about/heaven-card.png" class="Profil-picture img-fluid"
+                                    <img src="{% static 'images/about/heaven-card.png' %}" class="Profil-picture img-fluid"
                                     alt="Profil-picture">
                                 </div>
                                 <div class="card_desc position-absolute px-4 pb-2">
@@ -228,7 +229,7 @@
                             <div class="swiper-slide ">
                                 <div class="heavenCow_content_wr position-relative rounded-5 overflow-hidden">
                                 <div>
-                                    <img src="assets/images/about/heaven-card.png" class="Profil-picture img-fluid"
+                                    <img src="{% static 'images/about/heaven-card.png' %}" class="Profil-picture img-fluid"
                                     alt="Profil-picture">
                                 </div>
                                 <div class="card_desc position-absolute px-4 pb-2">
@@ -244,7 +245,7 @@
                             <div class="swiper-slide ">
                                 <div class="heavenCow_content_wr position-relative rounded-5 overflow-hidden">
                                 <div>
-                                    <img src="assets/images/about/heaven-card.png" class="Profil-picture img-fluid"
+                                    <img src="{% static 'images/about/heaven-card.png' %}" class="Profil-picture img-fluid"
                                     alt="Profil-picture">
                                 </div>
                                 <div class="card_desc position-absolute px-4 pb-2">
@@ -288,7 +289,7 @@
                                 <div class="swiper-slide ">
                                     <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                     <div>
-                                        <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                        <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                         alt="sustainable-card">
                                     </div>
                                     <div class="card_desc px-4 py-3 pb-2">
@@ -304,7 +305,7 @@
                                 <div class="swiper-slide ">
                                     <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                     <div>
-                                        <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                        <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                         alt="sustainable-card">
                                     </div>
                                     <div class="card_desc px-4 py-3 pb-2">
@@ -320,7 +321,7 @@
                                 <div class="swiper-slide ">
                                     <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                     <div>
-                                        <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                        <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                         alt="sustainable-card">
                                     </div>
                                     <div class="card_desc px-4 py-3 pb-2">
@@ -336,7 +337,7 @@
                                 <div class="swiper-slide ">
                                     <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                     <div>
-                                        <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                        <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                         alt="sustainable-card">
                                     </div>
                                     <div class="card_desc px-4 py-3 pb-2">
@@ -352,7 +353,7 @@
                                 <div class="swiper-slide ">
                                     <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                     <div>
-                                        <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                        <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                         alt="sustainable-card">
                                     </div>
                                     <div class="card_desc px-4 py-3 pb-2">
@@ -377,4 +378,4 @@
            </div>
         </section>
      
-      <?php require_once( 'includes/footer.php'); ?>
+    {% include 'footer.html' %}

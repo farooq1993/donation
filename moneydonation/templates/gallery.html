@@ -1,7 +1,7 @@
-<?php require_once( 'includes/header.php'); ?>
-  
+{% include 'header.html' %}
+  {% load static %}
   <body>
-    <?php require_once( 'includes/nav.php'); ?>
+    {% include 'nav.html' %}
       <!-- Section Banner -->
       <section class="gallery_page mx-2 pt-4 px-lg-5 position-relative">
         <div class="container">
@@ -45,46 +45,46 @@
            <div class="row py-4">
             <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
                 <div class="gallery_img text-center">
-                    <img class="img-fluid" src="./assets/images/gallery/gallery-1.png" alt="gallery-1">
+                    <img class="img-fluid" src="{% static 'images/gallery/gallery-1.png' %}" alt="gallery-1">
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
                 <div class="gallery_img text-center">
-                    <img class="img-fluid" src="./assets/images/gallery/gallery-1.png" alt="gallery-1">
+                    <img class="img-fluid" src="{% static 'images/gallery/gallery-1.png' %}" alt="gallery-1">
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
                 <div class="gallery_img text-center">
-                    <img class="img-fluid" src="./assets/images/gallery/gallery-1.png" alt="gallery-1">
+                    <img class="img-fluid" src="{% static 'images/gallery/gallery-1.png' %}" alt="gallery-1">
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
                 <div class="gallery_img text-center">
-                    <img class="img-fluid" src="./assets/images/gallery/gallery-1.png" alt="gallery-1">
+                    <img class="img-fluid" src="{% static 'images/gallery/gallery-1.png' %}" alt="gallery-1">
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
                 <div class="gallery_img text-center">
-                    <img class="img-fluid" src="./assets/images/gallery/gallery-1.png" alt="gallery-1">
+                    <img class="img-fluid" src="{% static 'images/gallery/gallery-1.png' %}" alt="gallery-1">
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
                 <div class="gallery_img text-center">
-                    <img class="img-fluid" src="./assets/images/gallery/gallery-1.png" alt="gallery-1">
+                    <img class="img-fluid" src="{% static 'images/gallery/gallery-1.png' %}" alt="gallery-1">
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
                 <div class="gallery_img text-center">
-                    <img class="img-fluid" src="./assets/images/gallery/gallery-1.png" alt="gallery-1">
+                    <img class="img-fluid" src="{% static 'images/gallery/gallery-1.png' %}" alt="gallery-1">
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
                 <div class="gallery_img text-center">
-                    <img class="img-fluid" src="./assets/images/gallery/gallery-1.png" alt="gallery-1">
+                    <img class="img-fluid" src="{% static 'images/gallery/gallery-1.png' %}" alt="gallery-1">
                 </div>
             </div>
            </div>
         </div>
       </section>
      
-      <?php require_once( 'includes/footer.php'); ?>
+    {% include 'footer.html' %}

@@ -1,8 +1,7 @@
-<?php require_once( 'includes/header.php'); ?>
-  
+{% include 'header.html' %}
+{% load static %}
   <body>
-    <?php require_once( 'includes/nav.php'); ?>
-
+    {% include 'nav.html' %}
     <section class="ourWork_activity_section py-5">
         <div class="container-fluid">
             <div class="row content">
@@ -44,7 +43,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -62,7 +61,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -80,7 +79,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -98,7 +97,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -116,7 +115,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -134,7 +133,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -156,31 +155,31 @@
                                     <div class="swiper factSwiper">
                                         <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                            <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                            <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                            <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                            <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                            <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                            <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                            <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                            <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                            <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                         </div>
                                         </div>
                                         <div class="swiper-pagination"></div>
@@ -198,7 +197,7 @@
                                     <div class="col-lg-7 col-md-7 pb-5 ps-md-5">
                                         <div class="">
                                             <div>
-                                                <img src="assets/images/our-work/hospital.png" class=" img-fluid" alt="hospital">
+                                                <img src="{% static 'images/our-work/hospital.png' %}" class=" img-fluid" alt="hospital">
                                             </div>
                                         </div>
                                     </div>
@@ -209,7 +208,7 @@
                                                     <div class="card-box">
                                                         <div class="row align-items-center">
                                                         <div class="col-5">
-                                                            <img src="assets/images/home/icon-01.png" class="img-fluid" alt="">
+                                                            <img src="{% static 'images/home/icon-01.png' %}" class="img-fluid" alt="">
                                                         </div>
                                                         <div class="col-7 ps-0 text-end">
                                                             <h3 class="fw-bold color-10 mb-0">
@@ -226,7 +225,7 @@
                                                     <div class="card-box">
                                                         <div class="row align-items-center">
                                                         <div class="col-5">
-                                                            <img src="assets/images/home/icon-02.png" class="img-fluid" alt="">
+                                                            <img src="{% static 'images/home/icon-02.png' %}" class="img-fluid" alt="">
                                                         </div>
                                                         <div class="col-7 ps-0 text-end">
                                                             <h3 class="fw-bold color-10 mb-0">
@@ -243,7 +242,7 @@
                                                     <div class="card-box">
                                                         <div class="row align-items-center">
                                                         <div class="col-5">
-                                                            <img src="assets/images/home/icon-03.png" class="img-fluid" alt="">
+                                                            <img src="{% static 'images/home/icon-03.png' %}" class="img-fluid" alt="">
                                                         </div>
                                                         <div class="col-7 ps-0 text-end">
                                                             <h3 class="fw-bold color-10 mb-0">
@@ -260,7 +259,7 @@
                                                     <div class="card-box">
                                                         <div class="row align-items-center">
                                                         <div class="col-5">
-                                                            <img src="assets/images/home/icon-04.png" class="img-fluid" alt="">
+                                                            <img src="{% static 'images/home/icon-04.png' %}" class="img-fluid" alt="">
                                                         </div>
                                                         <div class="col-7 ps-0 text-end">
                                                             <h3 class="fw-bold color-10 mb-0">
@@ -277,7 +276,7 @@
                                                     <div class="card-box">
                                                         <div class="row align-items-center">
                                                         <div class="col-5">
-                                                            <img src="assets/images/home/icon-05.png" class="img-fluid" alt="">
+                                                            <img src="{% static 'images/home/icon-05.png' %}" class="img-fluid" alt="">
                                                         </div>
                                                         <div class="col-7 ps-0 text-end">
                                                             <h3 class="fw-bold color-10 mb-0">
@@ -294,7 +293,7 @@
                                                     <div class="card-box">
                                                         <div class="row align-items-center">
                                                         <div class="col-5">
-                                                            <img src="assets/images/home/icon-06.png" class="img-fluid" alt="">
+                                                            <img src="{% static 'images/home/icon-06.png' %}" class="img-fluid" alt="">
                                                         </div>
                                                         <div class="col-7 ps-0 text-end">
                                                             <h3 class="fw-bold color-10 mb-0">
@@ -314,7 +313,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -332,7 +331,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -350,7 +349,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -368,7 +367,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -390,31 +389,31 @@
                                         <div class="swiper factSwiper">
                                             <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             </div>
                                             <div class="swiper-pagination"></div>
@@ -443,7 +442,7 @@
                                                     <div class="card-box">
                                                         <div class="row align-items-center">
                                                         <div class="col-5">
-                                                            <img src="assets/images/home/icon-01.png" class="img-fluid" alt="">
+                                                            <img src="{% static 'images/home/icon-01.png' %}" class="img-fluid" alt="">
                                                         </div>
                                                         <div class="col-7 ps-0 text-end">
                                                             <h3 class="fw-bold color-10 mb-0">
@@ -460,7 +459,7 @@
                                                     <div class="card-box">
                                                         <div class="row align-items-center">
                                                         <div class="col-5">
-                                                            <img src="assets/images/home/icon-02.png" class="img-fluid" alt="">
+                                                            <img src="{% static 'images/home/icon-02.png' %}" class="img-fluid" alt="">
                                                         </div>
                                                         <div class="col-7 ps-0 text-end">
                                                             <h3 class="fw-bold color-10 mb-0">
@@ -477,7 +476,7 @@
                                                     <div class="card-box">
                                                         <div class="row align-items-center">
                                                         <div class="col-5">
-                                                            <img src="assets/images/home/icon-03.png" class="img-fluid" alt="">
+                                                            <img src="{% static 'images/home/icon-03.png' %}" class="img-fluid" alt="">
                                                         </div>
                                                         <div class="col-7 ps-0 text-end">
                                                             <h3 class="fw-bold color-10 mb-0">
@@ -494,7 +493,7 @@
                                                     <div class="card-box">
                                                         <div class="row align-items-center">
                                                         <div class="col-5">
-                                                            <img src="assets/images/home/icon-04.png" class="img-fluid" alt="">
+                                                            <img src="{% static 'images/home/icon-04.png' %}" class="img-fluid" alt="">
                                                         </div>
                                                         <div class="col-7 ps-0 text-end">
                                                             <h3 class="fw-bold color-10 mb-0">
@@ -511,7 +510,7 @@
                                                     <div class="card-box">
                                                         <div class="row align-items-center">
                                                         <div class="col-5">
-                                                            <img src="assets/images/home/icon-05.png" class="img-fluid" alt="">
+                                                            <img src="{% static 'images/home/icon-05.png' %}" class="img-fluid" alt="">
                                                         </div>
                                                         <div class="col-7 ps-0 text-end">
                                                             <h3 class="fw-bold color-10 mb-0">
@@ -528,7 +527,7 @@
                                                     <div class="card-box">
                                                         <div class="row align-items-center">
                                                         <div class="col-5">
-                                                            <img src="assets/images/home/icon-06.png" class="img-fluid" alt="">
+                                                            <img src="{% static 'images/home/icon-06.png' %}" class="img-fluid" alt="">
                                                         </div>
                                                         <div class="col-7 ps-0 text-end">
                                                             <h3 class="fw-bold color-10 mb-0">
@@ -548,7 +547,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -566,7 +565,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -584,7 +583,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -602,7 +601,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -620,7 +619,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -638,7 +637,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -656,7 +655,7 @@
                                         <div class="">
                                             <div class="testimonials_content_wr rounded-5 overflow-hidden">
                                             <div>
-                                                <img src="assets/images/about/sustainable-card.png" class="sustainable-card img-fluid"
+                                                <img src="{% static 'images/about/sustainable-card.png' %}" class="sustainable-card img-fluid"
                                                 alt="sustainable-card">
                                             </div>
                                             <div class="card_desc px-4 py-3 pb-2">
@@ -687,31 +686,31 @@
                                         <div class="swiper factSwiper">
                                             <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="./assets/images/our-work/fact-img.png" alt="">
+                                                <img class="img-fluid" src="./{% static 'images/our-work/fact-img.png' %}" alt="">
                                             </div>
                                             </div>
                                             <div class="swiper-pagination"></div>
@@ -736,4 +735,4 @@
       </section>
 
      
-      <?php require_once( 'includes/footer.php'); ?>
+      {% include 'footer.html' %}
