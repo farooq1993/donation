@@ -67,6 +67,7 @@ def UploadImgGallery(request):
 
 def get_gallery_data(request):
     data = UploadMedia.objects.all()
+    print("fssggagg:",data)
     return render(request, 'get_gallery.html', {'data': data})
 
 
@@ -95,7 +96,8 @@ def about(request):
 #Gallery
 def gallery(request):
     try:
-        return render(request, 'gallery.html')
+        data = UploadMedia.objects.all()
+        return render(request, 'gallery.html',{"data":data})
     except:
         return JsonResponse({"msg":"page not found"})
     
