@@ -33,7 +33,9 @@ def LoginView(request):
 
 @login_required(login_url='/login')
 def UploadImgGallery(request):
+    user = request.user
     if request.method == 'POST':
+        
         form = UploadForm(request.POST, request.FILES)
         if form.is_valid():
             upload_media = UploadMedia(upload_user=request.user, img_bio=form.cleaned_data['img_bio'])
@@ -64,7 +66,7 @@ def UploadImgGallery(request):
     else:
         form = UploadForm()
 
-    return render(request, 'upload_gallery.html', {'form': form})
+    return render(request, 'upload_gallery.html', {'form': form, 'user':user})
 
 def get_gallery_data(request):
     data = UploadMedia.objects.all()
