@@ -44,6 +44,21 @@
            </div>
            <div class="row py-4">
             <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
+                {% for item in data %}
+                    <p>{{item.img_bio}}</p>
+                        {% for image in item.images %}
+                            <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
+                                <div class="gallery_img text-center">
+                                    <img class="img-fluid" src="{{ image }}" alt="gallery-image">
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                <!-- <div class="gallery_img text-center">
+                    <img class="img-fluid" src="{% static 'images/gallery/gallery-1.png' %}" alt="gallery-1">
+                </div> -->
+            </div>
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
                 <div class="gallery_img text-center">
                     <img class="img-fluid" src="{% static 'images/gallery/gallery-1.png' %}" alt="gallery-1">
                 </div>
@@ -77,12 +92,7 @@
                 <div class="gallery_img text-center">
                     <img class="img-fluid" src="{% static 'images/gallery/gallery-1.png' %}" alt="gallery-1">
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
-                <div class="gallery_img text-center">
-                    <img class="img-fluid" src="{% static 'images/gallery/gallery-1.png' %}" alt="gallery-1">
-                </div>
-            </div>
+            </div> -->
            </div>
         </div>
       </section>
