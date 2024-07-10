@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser, Group, Permission
 
 USER_TYPE_CHOICES = (
     ('adminuser', 'AdminUser'),
-    ('customer', 'Customer'),
+    ('Donor', 'Donor'),
 )
 
 class User(AbstractUser):
