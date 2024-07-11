@@ -8,9 +8,9 @@ import os
 from django.conf import settings
 
 
-
+@login_required(login_url='/login')
 def dashboard(request):
-    return HttpResponse({'msg':'dashboard'})
+    return render(request, 'vertical-dark.html')
 
 @login_required(login_url='/login')
 def herosection(request):
@@ -43,7 +43,7 @@ def herosection(request):
             upload_media.images = image_paths
             upload_media.save()
             messages.success(request ,"Images uploaded successfully")
-            return redirect('dashboard')  # Redirect after successful upload
+            #return redirect('dashboard')  # Redirect after successful upload
     else:
         form = HerosectionForm()
 

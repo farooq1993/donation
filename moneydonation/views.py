@@ -18,20 +18,20 @@ def index(request):
     # except:
     #      return JsonResponse({'msg':'server is upgrading'})
 
-def LoginView(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+# def LoginView(request):
+#     if request.method == 'POST':
+#         username = request.POST.get('username')
+#         password = request.POST.get('password')
 
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('index')
-    return render (request, 'login.html')
+#         user = authenticate(request, username=username, password=password)
+#         if user is not None:
+#             login(request, user)
+#             return redirect('index')
+#     return render (request, 'login.html')
 
 
 
-@login_required(login_url='/login')
+@login_required(login_url='/users/login')
 def UploadImgGallery(request):
     user = request.user
     if request.method == 'POST':

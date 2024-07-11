@@ -44,6 +44,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #"users.utils.loginmiddleware.UserTypeRedirectMiddleware" # Custome middleware for login
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -142,3 +143,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AUTHENTICATION_BACKENDS = [
+    'users.utils.backend.EmailBackend',
+    'django.contrib.auth.backends.ModelBackend',  # Default backend
+]

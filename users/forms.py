@@ -59,3 +59,7 @@ class CustomUserCreationForm(UserCreationForm):
             user.save()
         return user 
          
+
+class CustomLoginForm(forms.Form):
+    email = forms.EmailField(max_length=254, widget=forms.TextInput(attrs={'placeholder': 'Email'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Password'}))

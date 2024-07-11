@@ -7,8 +7,6 @@ urlpatterns = [
 
     path('', index, name='index'),
 
-    path('login', LoginView, name='login'),
-
     path('upload_img', UploadImgGallery, name='upload_images'),
 
     path('get_gallery', get_gallery_data, name='get_gallery'),
