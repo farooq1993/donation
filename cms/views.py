@@ -10,7 +10,12 @@ from django.conf import settings
 
 @login_required(login_url='/login')
 def dashboard(request):
-    return render(request, 'dashboard.html')
+    user = request.user
+    user_id = request.session.get('user_id')
+    username = request.session.get('username')
+    user_type = request.session.get('user_type')
+    print('user type',user)
+    return render(request, 'dashboard.html', {'user_id': user_id, 'username': username, 'user_type': user_type})
 
 @login_required(login_url='/login')
 def herosection(request):
