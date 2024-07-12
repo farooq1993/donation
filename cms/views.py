@@ -10,16 +10,14 @@ from django.conf import settings
 
 @login_required(login_url='/login')
 def dashboard(request):
-    return render(request, 'vertical-dark.html')
+    return render(request, 'dashboard.html')
 
 @login_required(login_url='/login')
 def herosection(request):
-    user = request.user
-    if request.method == 'POST':
-        
+    if request.method == 'POST':   
         form = HerosectionForm(request.POST, request.FILES)
         if form.is_valid():
-            upload_media = HeroSectionContent(upload_user=request.user, img_bio=form.cleaned_data['img_bio'])
+            upload_media = HeroSectionContent(user=request.user, title=form.cleaned_data['title'])
             upload_media.save()  # Save to get an ID
 
             # Handle file uploads
@@ -43,8 +41,8 @@ def herosection(request):
             upload_media.images = image_paths
             upload_media.save()
             messages.success(request ,"Images uploaded successfully")
-            #return redirect('dashboard')  # Redirect after successful upload
-    else:
-        form = HerosectionForm()
+            return redirect('dashboard')  # Redirect after successful upload
+    # else:
+    #     form = HerosectionForm()
 
     return render(request, 'herosection.html')

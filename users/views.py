@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.contrib import messages  
 from .forms import CustomUserCreationForm, CustomLoginForm
-from django.contrib.auth import login, authenticate 
+from django.contrib.auth import login, authenticate, logout
 
 
 
@@ -12,7 +12,7 @@ def createuser(request):
         if form.is_valid():  
             form.save()
             messages.success(request, 'User created successfully!')
-            return redirect('user/login')  # Redirect to login page or another success page
+            return redirect('login')  # Redirect to login page or another success page
         else:
             print(form.errors)
     else:  
@@ -34,10 +34,15 @@ def LoginView(request):
             if user.user_type == 'adminuser':
                 return redirect('dashboard')
             elif user.user_type == 'Donor':
-                return redirect('donor_dashboard')
+                return redirect('/')
             # else:
             #     return redirect('default_dashboard')
 
     # else:
     #     form = CustomLoginForm()
     return render(request, 'login.html')
+
+
+def LogoutView(request):
+    logout(request)
+    return redirect('login')

@@ -1,4 +1,6 @@
 from django.db import models
+from django_ckeditor_5.fields import CKEditor5Field
+from ckeditor.fields import RichTextField
 from django.conf import settings
 
 # Create your models here.
@@ -12,5 +14,24 @@ class HeroSectionContent(models.Model):
 
     def __str__(self):
         return self.user.username
+
+
+class DonationCategory(models.Model):
+    category_name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.category_name
+
+
+class Donation(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    donate_category = models.ForeignKey(DonationCategory, on_delete=models.CASCADE)
+    donation_title = RichTextField()
+    total_cow_adopt = models.BigIntegerField(null=True, blank=True)
+    created_time = models.DateTimeField(auto_now=True)
+
+
+    def __str__(self):
+        return self.donation_title
 
 
