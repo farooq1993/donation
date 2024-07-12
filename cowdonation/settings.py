@@ -31,7 +31,9 @@ INSTALLED_APPS = [
     #App name
     'moneydonation',
     'users',
-    'cms'
+    'cms',
+    'django_ckeditor_5',
+    'ckeditor',
 ]
 
 AUTH_USER_MODEL = 'users.User'
@@ -76,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'mataji-1',
+        'NAME': 'mataji-2',
 
         'USER': 'postgres',
 
