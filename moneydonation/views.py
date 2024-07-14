@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+
+from cms.models import HeroSectionContent
 from .models import UploadMedia
 from .forms import UploadForm
 
@@ -13,21 +15,12 @@ from django.contrib.auth import authenticate,login,logout
 
 # @login_required(login_url='/login')   
 def index(request):
-    #try:
-    return render(request, 'index.html')
-    # except:
-    #      return JsonResponse({'msg':'server is upgrading'})
-
-# def LoginView(request):
-#     if request.method == 'POST':
-#         username = request.POST.get('username')
-#         password = request.POST.get('password')
-
-#         user = authenticate(request, username=username, password=password)
-#         if user is not None:
-#             login(request, user)
-#             return redirect('index')
-#     return render (request, 'login.html')
+    try:
+        #calling Hero section data
+        data = HeroSectionContent.objects.all()
+        return render(request, 'index.html', {'data':data})
+    except:
+         return JsonResponse({'msg':'server is upgrading'})
 
 
 
@@ -68,9 +61,9 @@ def UploadImgGallery(request):
 
     return render(request, 'upload_gallery.html', {'form': form, 'user':user})
 
-def get_gallery_data(request):
-    data = UploadMedia.objects.all()
-    return render(request, 'get_gallery.html', {'data': data})
+# def get_gallery_data(request):
+#     data = UploadMedia.objects.all()
+#     return render(request, 'get_gallery.html', {'data': data})
 
 
 #show our work 

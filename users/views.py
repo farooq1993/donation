@@ -1,6 +1,8 @@
 from django.shortcuts import redirect, render 
 from django.urls import reverse
-from django.contrib import messages  
+from django.http import HttpResponse
+from django.contrib import messages 
+from .models import User 
 from .forms import CustomUserCreationForm, CustomLoginForm
 from django.contrib.auth import login, authenticate, logout
 
@@ -39,8 +41,9 @@ def LoginView(request):
             # else:
             #     return redirect('default_dashboard')
 
-    # else:
-    #     form = CustomLoginForm()
+        else:
+            # Password does not match or user does not exist
+            messages.error(request,"Username or password not correct")
     return render(request, 'login.html')
 
 

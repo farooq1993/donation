@@ -9,7 +9,7 @@ urlpatterns = [
 
     path('upload_img', UploadImgGallery, name='upload_images'),
 
-    path('get_gallery', get_gallery_data, name='get_gallery'),
+    #path('get_gallery', get_gallery_data, name='get_gallery'),
 
     path('our_work',our_work, name='our_work'),
 

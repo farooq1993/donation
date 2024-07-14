@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import JsonResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import HeroSectionContent
@@ -51,3 +51,12 @@ def herosection(request):
     #     form = HerosectionForm()
 
     return render(request, 'herosection.html')
+
+# def get_herosection(request):
+#     try:
+#         data = HeroSectionContent.objects.all()
+#         print("Hero data",data.title)
+#         return render(request, 'index.html',{"data":data})
+#     except:
+#         return JsonResponse({"msg":"page not found"})
+    
