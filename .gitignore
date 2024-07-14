@@ -2,16 +2,28 @@
 *.pyc
 *.pyo
 *.pyd
+__pycache__/
 
 # Ignore virtual environment directories
 venv/
+env/
 
-# Ignore migration and cache directories
-migrations/
-__pycache__/
+# Ignore migration directories
+*/migrations/
 
 # Ignore IDE/editor specific files
 .idea/
 .vscode/
 
+# Ignore media files
 media/
+
+# Ignore database files
+*.sqlite3
+db.sqlite3
+
+# Ignore log files
+*.log
+
+# Ignore local settings
+local_settings.py
