@@ -15,12 +15,12 @@ from django.contrib.auth import authenticate,login,logout
 
 # @login_required(login_url='/login')   
 def index(request):
-    try:
+    #try:
         #calling Hero section data
-        data = HeroSectionContent.objects.all()
-        return render(request, 'index.html', {'data':data})
-    except:
-         return JsonResponse({'msg':'server is upgrading'})
+    data = HeroSectionContent.objects.first()
+    return render(request, 'index.html', {'data':data})
+    # except:
+    #      return JsonResponse({'msg':'server is upgrading'})
 
 
 

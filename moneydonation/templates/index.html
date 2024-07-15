@@ -19,12 +19,12 @@
                     80G
                   </span>
                 </h5>
-                {% for i in data %}
+              
                 <h2 class="ff-antom display-4 pt-1">
                   <!-- Saving Sacred Cows -->
-                   {{i.title}}
+                   {{data.title}}
                 </h2>
-                {% endfor %}
+                
                 <div class="pt-2">
                   <a href="#" class="cm-btn bg-1 text-black">
                     <img src="{% static 'images/cow.svg' %}" width="30" alt="">
@@ -144,16 +144,19 @@
               <div class="swiper bannerSwiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    {% for item in data %}
+                    {% if data %}
                     <!-- <p>{{item.img_bio}}</p> -->
-                        {% for image in item.images %}
+                        {% for image in data.image_list %}
                             <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
                                 <div class="gallery_img text-center">
                                     <img class="img-fluid" src="{{ image }}" alt="gallery-image">
                                 </div>
                             </div>
                         {% endfor %}
-                    {% endfor %}
+
+                        {% else %}
+                        <p>No content available</p>
+                    {% endif %}
                   <!-- <div class="swiper-slide">
                     <img src="{% static 'images/home/slider-01.jpg' %}" alt="">
                   </div>

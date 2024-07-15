@@ -14,6 +14,10 @@ class HeroSectionContent(models.Model):
 
     def __str__(self):
         return self.user.username
+    
+    @property
+    def image_list(self):
+        return self.images if isinstance(self.images, list) else []
 
 
 class DonationCategory(models.Model):
