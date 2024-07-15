@@ -2,25 +2,21 @@ from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+import os 
+from django.conf import settings
 
 from cms.models import HeroSectionContent
 from .models import UploadMedia
 from .forms import UploadForm
 
-import os 
-from django.conf import settings
-from django.contrib.auth import authenticate,login,logout
-# Create your views here.
-
-
-# @login_required(login_url='/login')   
+ 
 def index(request):
-    #try:
+    try:
         #calling Hero section data
-    data = HeroSectionContent.objects.first()
-    return render(request, 'index.html', {'data':data})
-    # except:
-    #      return JsonResponse({'msg':'server is upgrading'})
+        data = HeroSectionContent.objects.first()
+        return render(request, 'index.html', {'data':data})
+    except:
+         return JsonResponse({'msg':'server is upgrading'})
 
 
 
