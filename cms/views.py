@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import HeroSectionContent
 from .forms import HerosectionForm
 import os 
+import logging
 from django.conf import settings
 
 
@@ -14,7 +15,7 @@ def dashboard(request):
     user_id = request.session.get('user_id')
     username = request.session.get('username')
     user_type = request.session.get('user_type')
-    print('user type',user)
+    logging.info(f"User logged by:{user_type}")
     return render(request, 'dashboard.html', {'user_id': user_id, 'username': username, 'user_type': user_type})
 
 @login_required(login_url='/login')
@@ -46,6 +47,7 @@ def herosection(request):
             upload_media.images = image_paths
             upload_media.save()
             messages.success(request ,"Images uploaded successfully")
+            logging.info("Data saved successfully")
             return redirect('dashboard')  # Redirect after successful upload
     # else:
     #     form = HerosectionForm()
