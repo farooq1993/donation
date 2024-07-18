@@ -21,21 +21,32 @@ class HeroSectionContent(models.Model):
 
 
 class DonationCategory(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     category_name = models.CharField(max_length=100)
+    created_at =  models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.category_name
 
 
-class Donation(models.Model):
+class DonationCard(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     donate_category = models.ForeignKey(DonationCategory, on_delete=models.CASCADE)
+    img = models.FileField(upload_to='media/')
     donation_title = RichTextField()
     total_cow_adopt = models.BigIntegerField(null=True, blank=True)
     created_time = models.DateTimeField(auto_now=True)
 
 
     def __str__(self):
-        return self.donation_title
+        return self.user.username
+    
+
+class DonatedPerson(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    amount_paid = models.FloatField()
+    custome_amount_paid = models.FloatField()
+    donated_on_date = models.DateTimeField(auto_now=True)
+    request_80g = models.BooleanField(default=False)
 
 

@@ -1,0 +1,13 @@
+{% include 'header.html' %}
+{% load static %}
+
+<title>{% block title %} Donation {% endblock %}</title>
+
+<body>
+    <h1>Donate to our NGO</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Donate</button>
+    </form>
+</body>

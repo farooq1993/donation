@@ -3,5 +3,6 @@ from .models import *
 
 
 admin.site.register(HeroSectionContent)
-admin.site.register(Donation)
+admin.site.register(DonationCard)
 admin.site.register(DonationCategory)
+admin.site.register(DonatedPerson)

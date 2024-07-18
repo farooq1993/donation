@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 import os 
 from django.conf import settings
 
-from cms.models import HeroSectionContent
+from cms.models import *
 from .models import UploadMedia
 from .forms import UploadForm
 
@@ -14,11 +14,10 @@ def index(request):
     try:
         #calling Hero section data
         data = HeroSectionContent.objects.first()
-        return render(request, 'index.html', {'data':data})
+        donate_data = DonationCard.objects.get()
+        return render(request, 'index.html', {'data':data,'donate_data':donate_data})
     except:
          return JsonResponse({'msg':'server is upgrading'})
-
-
 
 @login_required(login_url='/users/login')
 def UploadImgGallery(request):

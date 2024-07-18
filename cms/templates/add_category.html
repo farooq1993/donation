@@ -1,0 +1,24 @@
+{% include 'header.html' %}
+{% load static %}
+
+<title>Add Category</title>
+
+<body>
+    <div class="d-inline mx-3 bg-primary text-center text-dark">
+    <h2>Add category</h2>
+</div>
+{% if messages %}
+    {%for message in messages %}
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+    {% endfor %}
+
+{% endif %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group container">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name = "category_name" placeholder="Enter Category">
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg float-md-right">Submit</button>
+  </form>
+</body>

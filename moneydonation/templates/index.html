@@ -460,7 +460,13 @@
             <div class="col-md-12">
               <div class="swiper campaignSwiper swiper-container">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
+                  <p>{{donate_data.donation_title}}</p>
+                  <p>{{donate_data.donate_category}}</p>
+                  <a href="{% url 'donate' %}" class="campaign-btn" style="color: #C21959;"  data-bs-target="#donate1">
+                    Donate Now
+                  </a>
+                  <!-- <div class="swiper-slide">
+                    
                     <div class="slide_content rounded-5" style="background-color: #C21959;">
                       <div class="row justify-content-center align-items-center">
                         <div class="col-8">
@@ -522,7 +528,7 @@
                       </h3>
                       <div class="row pt-3">
                         <div class="col-12">
-                          <a href="#" class="campaign-btn" style="color: #C21959;" data-bs-toggle="modal" data-bs-target="#donate1">
+                          <a href="{% url 'donate' %}" class="campaign-btn" style="color: #C21959;" data-bs-toggle="modal" data-bs-target="#donate1">
                             Donate Now
                           </a>
                           <a href="#" class="knowMore-donate ext-decoration-underline text-white fw-bold ps-3 simple-link" data-bs-toggle="modal" data-bs-target="#knowMoredonate1">
@@ -533,7 +539,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="nextSlide swiper-slide" >
                     <div class="slide_content rounded-5" style="background-color: #00C4AC;" >
                       <div class="row justify-content-center align-items-center">
