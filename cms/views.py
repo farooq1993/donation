@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth import login
@@ -75,13 +76,41 @@ def add_donation_category(request):
         form =DonationCategoryAdd()
     return render(request, 'add_category.html')
 
-def get_donationcard(request, id):
-    single_donationcard = DonationCard.objects.get(id=id)
-    return render(request, 'donate.html')
 
-#Add donationcard data
+
+
 @login_required(login_url='/login')
 def donation_card(request):
-    category = DonationCategory.objects.all()
-    # context ={'category':category}
-    return render(request, 'donation_card.html', {'category':category})
+    categories = DonationCategory.objects.all()
+    
+    if request.method == 'POST':
+        form = DonationCardForm(request.POST, request.FILES)
+        if form.is_valid():
+            donation_card = form.save(commit=False)
+            donation_card.user = request.user
+            category_id = request.POST.get('donate_category')
+            if category_id:
+                donation_card.donate_category_id = category_id
+            donation_card.save()
+            messages.success(request, "Donation card added successfully")
+            return redirect('dashboard')
+        else:
+            return JsonResponse({'msg': form.errors})
+    else:
+        form = DonationCardForm()
+    
+    return render(request, 'donation_card.html', {'form': form, 'categories': categories})
+
+#Get All Donation Card Data
+@login_required(login_url='/login')
+def all_donationcards(request):
+    donation_card = DonationCard.objects.all().order_by('-id')
+    card_list = [card for card in donation_card]
+    return render(request, 'all_donation_card.html', {'donation_cards': card_list})
+
+@login_required(login_url='/login')
+def get_donationcard(request, id):
+    single_donationcard = DonationCard.objects.get(id=id)
+    return render(request, 'donate.html', {'single_donationcard':single_donationcard})
+
+

@@ -1,11 +1,24 @@
-{% include 'header.html' %}
 {% load static %}
 
 <title>Add Category</title>
 
 <body>
+  <div class="topbar">
+
+    <!-- LOGO -->
+    <div class="topbar-left">
+        <a href="{% url 'dashboard' %}" class="logo">
+            <span class="logo-light">
+                    <i class="mdi mdi-camera-control"></i> Hingonia
+                </span>
+            <span class="logo-sm">
+                    <i class="mdi mdi-camera-control"></i>
+                </span>
+        </a>
+    </div>
+    {% include 'menu.html' %}
     <div class="d-inline mx-3 bg-primary text-center text-dark">
-    <h2>Add category</h2>
+    <h2 class="text-white text-center mt-3">Add category</h2>
 </div>
 {% if messages %}
     {%for message in messages %}
@@ -16,9 +29,9 @@
 <form method="POST">
     {% csrf_token %}
     <div class="form-group container">
-      <label for="exampleInputEmail1">Email address</label>
+      <label for="exampleInputEmail1">Category Name</label>
       <input type="text" class="form-control" id="exampleInputEmail1" name = "category_name" placeholder="Enter Category">
     </div>
-    <button type="submit" class="btn btn-primary btn-lg float-md-right">Submit</button>
+    <button type="submit" class="btn btn-primary btn-lg float-md-right text-white mx-5">Submit</button>
   </form>
 </body>

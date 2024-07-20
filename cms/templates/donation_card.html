@@ -44,10 +44,10 @@
             </div><br>
             <div class="mb-3">
                 <label class="form-label">Select Category</label>
-                <select class="form-select" aria-label="Default select example">
+                <select name="donate_category" class="form-select" aria-label="Default select example">
                     <option selected>Open this select menu</option>
-                    {% for cat in category %}
-                        <option value="cat.id">{{cat.category_name}}</option>
+                    {% for cat in categories %}
+                        <option value="{{ cat.id }}">{{cat.category_name}}</option>
                     {% endfor %}
                   </select>
             </div><br>

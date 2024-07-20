@@ -15,6 +15,17 @@ class DonationCategoryAdd(forms.ModelForm):
         fields = "__all__"
         exclude = ['user']
 
+class DonationCardForm(forms.ModelForm):
+    category = forms.ModelChoiceField(queryset=DonationCategory.objects.all(), widget=forms.HiddenInput(), required=False)
+    
+    class Meta:
+        model = DonationCard
+        fields = ['donation_title', 'total_cow_adopt', 'img']  
+
+    def __init__(self, *args, **kwargs):
+        super(DonationCardForm, self).__init__(*args, **kwargs)
+        # You can set an initial category if required
+        self.fields['category'].initial = DonationCategory.objects.first()  
 
 class DonationForm(forms.ModelForm):
     amount_paid = forms.FloatField(required=True)

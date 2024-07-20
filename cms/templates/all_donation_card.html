@@ -1,0 +1,41 @@
+{% load static %}
+
+<title>{%block title %} All Donation Cards {% endblock%}</title>
+<body>
+
+    <div class="topbar">
+
+        <!-- LOGO -->
+        <div class="topbar-left">
+            <a href="{% url 'dashboard' %}" class="logo">
+                <span class="logo-light">
+                        <i class="mdi mdi-camera-control"></i> Hingonia
+                    </span>
+                <span class="logo-sm">
+                        <i class="mdi mdi-camera-control"></i>
+                    </span>
+            </a>
+        </div>
+        {% include 'menu.html' %}
+    <h2 class="container text-white"> All Donation Cards</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <!-- <th scope="col">Sr No.</th> -->
+              <th scope="col">Created By</th>
+              <th scope="col">Donation Category</th>
+              <th scope="col">Donation card Title</th>
+              <th scope="col">Created At</th>
+            </tr>
+          </thead>
+          {% for card in donation_cards %}
+        <tr class="table-primary">
+            <!-- <td>{{ card.id }}</td> -->
+            <td>{{ card.user.username }}</td>
+            <td>{{ card.donate_category.category_name }}</td>
+            <td>{{ card.donation_title }}</td>
+            <td>{{ card.created_time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
