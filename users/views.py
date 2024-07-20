@@ -1,9 +1,12 @@
-from django.shortcuts import redirect, render 
+from django.shortcuts import get_object_or_404, redirect, render 
 from django.urls import reverse
-from django.http import HttpResponse
-from django.contrib import messages 
+from django.http import JsonResponse
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from cms.forms import DonationForm
+from cms.models import DonatedPerson, DonationCategory 
 from .models import User 
-from .forms import CustomUserCreationForm, CustomLoginForm
+from .forms import CustomUserCreationForm
 from django.contrib.auth import login, authenticate, logout
 
 
@@ -50,3 +53,45 @@ def LoginView(request):
 def LogoutView(request):
     logout(request)
     return redirect('login')
+
+
+#Donation 
+@login_required(login_url='/login')
+def donate(request, category_id):
+    category = get_object_or_404(DonationCategory, id=category_id)
+    
+    if request.method == 'POST':
+        form = DonationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            email = form.cleaned_data['email']
+            mobile = form.cleaned_data['mobile']
+            amount_paid = form.cleaned_data['amount_paid']
+            custom_amount_paid = form.cleaned_data['custom_amount_paid']
+            request_80g = form.cleaned_data['request_80g']
+
+            # Create user with phone number as password
+            user = User.objects.create_user(
+                username=username,
+                email=email,
+                password=mobile,  # Using phone number as password
+            )
+
+            # Store donation details
+            donation = DonatedPerson.objects.create(
+                user=user,
+                amount_paid=amount_paid,
+                custome_amount_paid=custom_amount_paid,
+                request_80g=request_80g,
+                donate_category=category
+            )
+            print("donation save",donation)
+
+            return JsonResponse({'success': True})
+
+        else:
+            return JsonResponse({'success': False, 'errors': form.errors})
+    else:
+        form = DonationForm()
+        
+    return render(request, 'index.html', {'form': form, 'category': category})

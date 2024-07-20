@@ -7,6 +7,7 @@ urlpatterns = [
 
     path('createuser', createuser, name='index'),
     path('login', LoginView, name='login'),
+    path('donate/<int:category_id>/', donate, name='donate'),
     path('logout', LogoutView, name='logout'),
 
   

@@ -17,10 +17,11 @@ class DonationCategoryAdd(forms.ModelForm):
 
 
 class DonationForm(forms.ModelForm):
-    amount_paid = forms.FloatField()
+    amount_paid = forms.FloatField(required=True)
     custom_amount_paid = forms.FloatField(required=False)
     request_80g = forms.BooleanField(required=False)
-    category = forms.ModelChoiceField(queryset=DonationCategory.objects.all())
+    category = forms.ModelChoiceField(queryset=DonationCategory.objects.all(), widget=forms.HiddenInput(),required=False)
+
 
     class Meta:
         model = User

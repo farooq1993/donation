@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
@@ -7,9 +7,7 @@ from .forms import *
 import os 
 import logging
 from django.conf import settings
-# from django.contrib.auth import get_user_model
 
-# User=get_user_model()
 
 
 @login_required(login_url='/login')
@@ -57,6 +55,8 @@ def herosection(request):
     return render(request, 'herosection.html')
 
 
+
+
 # Add Donation category
 @login_required(login_url='/login')
 def add_donation_category(request):
@@ -75,44 +75,13 @@ def add_donation_category(request):
         form =DonationCategoryAdd()
     return render(request, 'add_category.html')
 
-def donate(request):
-    if request.method == 'POST':
-        form = DonationForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            email = form.cleaned_data['email']
-            mobile = form.cleaned_data['mobile']
-            amount_paid = form.cleaned_data['amount_paid']
-            custom_amount_paid = form.cleaned_data['custom_amount_paid']
-            request_80g = form.cleaned_data['request_80g']
-            category = form.cleaned_data['category']
+def get_donationcard(request, id):
+    single_donationcard = DonationCard.objects.get(id=id)
+    return render(request, 'donate.html')
 
-            # Set the phone number as the user's password
-            user = User.objects.create_user(
-                username=username,
-                email=email,
-                mobile=mobile,
-                password=mobile,  # Using phone number as password
-                user_type='Donor'
-            )
-
-            # Store donation details
-            DonatedPerson.objects.create(
-                user=user,
-                amount_paid=amount_paid,
-                custome_amount_paid=custom_amount_paid,
-                request_80g=request_80g
-            )
-
-            # Automatically log the user in
-            login(request, user)
-
-            return redirect('success_page')
-    else:
-        form = DonationForm()
-    return render(request, 'donate.html', {'form': form})
-
-
-
-
-    
+#Add donationcard data
+@login_required(login_url='/login')
+def donation_card(request):
+    category = DonationCategory.objects.all()
+    # context ={'category':category}
+    return render(request, 'donation_card.html', {'category':category})

@@ -10,7 +10,8 @@ env/
 
 # Ignore migration directories
 */migrations/
-
+ cms/migrations/
+users/migrations/
 # Ignore IDE/editor specific files
 .idea/
 .vscode/

@@ -461,95 +461,558 @@
               <div class="swiper campaignSwiper swiper-container">
                 <div class="swiper-wrapper">
                   {% for i in donate_data %}
-                  <div class="swiper-slide">
+                  <p>{{i.donation_title}}</p>
+                  <p>{{i.donate_category.category_name}}</p>
+                  <img class="img-fluid" src="{{i.img}}">
+                  <a href="{% url 'donate'  i.donate_category.id %}" class="campaign-btn" style="color: #C21959;"  data-bs-target="#donate1">
+                    Donate Now
+                  </a>
+
+                  {% endfor %}
+                  <!-- <div class="swiper-slide">
+                    
                     <div class="slide_content rounded-5" style="background-color: #C21959;">
                       <div class="row justify-content-center align-items-center">
                         <div class="col-8">
                           <h6 class="text-white">
-                            #{{ i.donation_title|slugify }}
+                            #Haven_for_cows
                           </h6>
                           <h5 class="text-white fw-semibold ff-epilogue mb-0">
-                            {{ i.donate_category.category_name }}
+                            Infrastructure
                           </h5>
                         </div>
                         <div class="col-2">
                           <a href="#">
-                            <i class="bi bi-share text-white fs-3"></i>
+                            <i class="bi bi-share text-white fs-3">
+                            </i>
                           </a>
                         </div>
                       </div>
                       <div>
-                        <img src="{{ i.img }}" class="campaign-img img-fluid" alt="{{ i.donation_title }}">
+                        <img src="{% static 'images/home/campaign-01.jpg' %}" class="campaign-img" alt="">
                       </div>
                       <h2 class="campaign-title text-center text-white fw-bold">
-                        {{ i.donation_title }}
+                        Cow Shed
                       </h2>
+                      <div class="row mb-1">
+                        <div class="col-6">
+                          <h6 class="text-white mb-0 f-14 fw-medium">
+                            raised
+                          </h6>
+                        </div>
+                        <div class="col-6 text-end">
+                          <h6 class="text-white mb-0 f-14 fw-medium">
+                            Goal
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100">
+                        <div class="progress-bar text-bg-light" style="width: 75%">
+                        </div>
+                      </div>
+                      <div class="row mt-1">
+                        <div class="col-6">
+                          <h5 class="text-white ff-epilogue f-16">
+                            <i class="bi bi-currency-rupee text-white">
+                            </i>
+                            7500
+                          </h5>
+                        </div>
+                        <div class="col-6 text-end">
+                          <h5 class="text-white ff-epilogue f-16">
+                            <i class="bi bi-currency-rupee text-white">
+                            </i>
+                            10000
+                          </h5>
+                        </div>
+                      </div>
                       <h3 class="campaign-subtitle text-white fw-semibold">
-                        Join Us in Supporting {{ i.donation_title }}
+                        Join Us in Creating a Haven for Abandoned Cows!
                       </h3>
                       <div class="row pt-3">
                         <div class="col-12">
-            
-                          <button type="button" class="btn btn-primary" 
-                          data-bs-toggle="modal" data-bs-target="#donate1" onclick="openDonateModal('{{ i.donate_category.id }}')">Donate Now</button>
-      
-                          <a href="#" class="knowMore-donate text-decoration-underline text-white fw-bold ps-3 simple-link" data-bs-toggle="modal" data-bs-target="#knowMoreDonate{{ forloop.counter }}">
-                            Know more
+                          
+                          <a href="#" class="knowMore-donate ext-decoration-underline text-white fw-bold ps-3 simple-link" data-bs-toggle="modal" data-bs-target="#knowMoredonate1">
+                            know more
                           </a>
+                        </div>
+                        <div class="col-6">
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="nextSlide swiper-slide" >
+                    <div class="slide_content rounded-5" style="background-color: #00C4AC;" >
+                      <div class="row justify-content-center align-items-center">
+                        <div class="col-8">
+                          <h6 class="text-white">
+                            #Hospital_for_cows
+                          </h6>
+                          <h5 class="text-white fw-semibold ff-epilogue mb-0">
+                            Health Care
+                          </h5>
+                        </div>
+                        <div class="col-2">
+                          <a href="#">
+                            <i class="bi bi-share text-white fs-3">
+                            </i>
+                          </a>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="{% static 'images/home/campaign-02.jpg' %}" class="campaign-img" alt="">
+                      </div>
+                      <h2 class="campaign-title text-center text-white fw-bold">
+                        Medical Treatment
+                      </h2>
+                      <div class="row mb-1">
+                        <div class="col-6">
+                          <h6 class="text-white mb-0 f-14 fw-medium">
+                            raised
+                          </h6>
+                        </div>
+                        <div class="col-6 text-end">
+                          <h6 class="text-white mb-0 f-14 fw-medium">
+                            Goal
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100">
+                        <div class="progress-bar text-bg-light" style="width: 45%">
+                        </div>
+                      </div>
+                      <div class="row mt-1">
+                        <div class="col-6">
+                          <h5 class="text-white ff-epilogue f-16">
+                            <i class="bi bi-currency-rupee text-white">
+                            </i>
+                            17,500
+                          </h5>
+                        </div>
+                        <div class="col-6 text-end">
+                          <h5 class="text-white ff-epilogue f-16">
+                            <i class="bi bi-currency-rupee text-white">
+                            </i>
+                            1,00,000
+                          </h5>
+                        </div>
+                      </div>
+                      <h3 class="campaign-subtitle text-white fw-semibold">
+                        Creating a Sanctuary for Sacred Cows Well-being
+                      </h3>
+                      <div class="row pt-3">
+                        <div class="col-12">
+                          <a href="#" class="campaign-btn" style="color: #00C4AC;" data-bs-toggle="modal" data-bs-target="#donate2">
+                            Donate Now
+                          </a>
+                          <a href="#"class="knowMore-donate ext-decoration-underline text-white fw-bold ps-3 simple-link" data-bs-toggle="modal" data-bs-target="#knowMoredonate2">
+                            know more
+                          </a>
+                        </div>
+                        <div class="col-6">
                         </div>
                       </div>
                     </div>
                   </div>
-                  {% endfor %}
+                  <div class="nextSlide swiper-slide" >
+                    <div class="slide_content rounded-5" style="background-color: #FF7A41;">
+                      <div class="row justify-content-center align-items-center">
+                        <div class="col-8">
+                          <h6 class="text-white">
+                            #Food_for_cows
+                          </h6>
+                          <h5 class="text-white fw-semibold ff-epilogue mb-0">
+                            Go Seva
+                          </h5>
+                        </div>
+                        <div class="col-2">
+                          <a href="#">
+                            <i class="bi bi-share text-white fs-3">
+                            </i>
+                          </a>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="{% static 'images/home/campaign-02.jpg' %}" class="campaign-img" alt="">
+                      </div>
+                      <h2 class="campaign-title text-center text-white fw-bold">
+                        Feeding Cows
+                      </h2>
+                      <div class="row mb-1">
+                        <div class="col-6">
+                          <h6 class="text-white mb-0 f-14 fw-medium">
+                            raised
+                          </h6>
+                        </div>
+                        <div class="col-6 text-end">
+                          <h6 class="text-white mb-0 f-14 fw-medium">
+                            Goal
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100">
+                        <div class="progress-bar text-bg-light" style="width: 45%">
+                        </div>
+                      </div>
+                      <div class="row mt-1">
+                        <div class="col-6">
+                          <h5 class="text-white ff-epilogue f-16">
+                            <i class="bi bi-currency-rupee text-white">
+                            </i>
+                            17,500
+                          </h5>
+                        </div>
+                        <div class="col-6 text-end">
+                          <h5 class="text-white ff-epilogue f-16">
+                            <i class="bi bi-currency-rupee text-white">
+                            </i>
+                            1,00,000
+                          </h5>
+                        </div>
+                      </div>
+                      <h3 class="campaign-subtitle text-white fw-semibold">
+                        Ensuring Nutritious Food and Holistic Care for Our Precious Cows
+                      </h3>
+                      <div class="row pt-3">
+                        <div class="col-12">
+                          <a href="#" class="campaign-btn" style="color: #FF7A41;" data-bs-toggle="modal" data-bs-target="#donate2">
+                            Donate Now
+                          </a>
+                          <a href="#" class="knowMore-donate ext-decoration-underline text-white fw-bold ps-3 simple-link" data-bs-toggle="modal" data-bs-target="#knowMoredonate3">
+                            know more
+                          </a>
+                        </div>
+                        <div class="col-6">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <!-- <div class="swiper-button-next">
+                </div>
+                <div class="swiper-button-prev">
+                </div> -->
               </div>
             </div>
-            
-            
           </div>
 
           <!-- Model -->
 
           <!-- Modal 1 -->
+            <div class="donateModel"> 
+              <div class="modal fade" id="donate1"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="donate1Label" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title fw-bold w-100 f-24">Cow Shed</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="donateSilde" id="donateSlide">
+                              <div class="row zIndex-3 donationForm_wr">
+                                <div class="col-xl-6 col-lg-7">
+                                  <div class="card_donate d-flex gap-2 mb-2" id="card_donate_1">
+                                    <img src="{% static 'images/home/steel.png'  %}" class="card-img-top img-fluid" alt="Steel Structure Seva">
+                                    <div class="card-body d-flex flex-row gap-2">
+                                        <div>
+                                            <h5 class="card-title fw-bold">Steel Structure Seva</h5>
+                                            <p class="card-text f-12">Welcome abandoned cows to a safe haven with sturdy steel structures offering shelter and care. Join us in creating their sanctuary.</p>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <div class="add_button">
+                                                <button class="btn btn-primary f-12 add-button">Add +</button>
+                                            </div>
+                                            <div class="quantity-container" style="display: none;">
+                                                <button class="btn btn-primary f-14 decrement-btn">-</button>
+                                                <span class="mx-2 quantity-value">0</span>
+                                                <button class="btn btn-primary f-14 increment-btn">+</button>
+                                                <button class="btn btn-primary interBtn enter-button">Enter</button>
+                                            </div>
+                                            <div class="added-button" style="display: none;">
+                                                <button class="btn btn-primary f-12 bg-dark text-white">
+                                                    Added 
+                                                    <img src="{% static 'images/home/done_all.png'  %}" class="card-img-top img-fluid" style="width:auto; height:16px" alt="done">
+                                                </button>
+                                            </div>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="card_donate d-flex gap-2 mb-2" id="card_donate_1">
+                                    <img src="{% static 'images/home/concrete.png'  %}" class="card-img-top img-fluid" alt="concrete Seva">
+                                    <div class="card-body d-flex flex-row gap-2">
+                                        <div>
+                                          <h5 class="card-title fw-bold">Concrete Seva</h5>
+                                          <p class="card-text f-12">A solid sanctuary for abandoned cows. Join us in building their haven with sturdy structures, offering shelter and care to these gentle beings.</p>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <div class="add_button">
+                                                <button class="btn btn-primary f-12 add-button">Add +</button>
+                                            </div>
+                                            <div class="quantity-container" style="display: none;">
+                                                <button class="btn btn-primary f-14 decrement-btn">-</button>
+                                                <span class="mx-2 quantity-value">0</span>
+                                                <button class="btn btn-primary f-14 increment-btn">+</button>
+                                                <button class="btn btn-primary interBtn enter-button">Enter</button>
+                                            </div>
+                                            <div class="added-button" style="display: none;">
+                                                <button class="btn btn-primary f-12 bg-dark text-white">
+                                                    Added 
+                                                    <img src="{% static 'images/home/done_all.png'  %}" class="card-img-top img-fluid" style="width:auto; height:16px" alt="done">
+                                                </button>
+                                            </div>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                        </div>
+                                    </div>
+                                  </div>
 
-<!-- Modal -->
-<div class="donateModel"> 
- <!-- Modal -->
-<div class="modal fade" id="donate1" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="donateModalLabel">Donate</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <!-- Form content here -->
-        <form id="donateForm" method="POST">
-          {% csrf_token %}
-          <input type="hidden" name="category" id="categoryId">
-          <div class="mb-3">
-            <label for="amountPaid" class="form-label">Amount Paid</label>
-            <input type="number" class="form-control" id="amountPaid" name="amount_paid" required>
-          </div>
-          <!-- <div class="mb-3">
-            <label for="customAmountPaid" class="form-label">Custom Amount Paid</label>
-            <input type="number" class="form-control" id="customAmountPaid" name="custom_amount_paid">
-          </div> -->
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="request80g" name="request_80g">
-            <label class="form-check-label" for="request80g">Request 80G Receipt</label>
-          </div>
-          <button type="submit" class="btn btn-primary" onclick="submitDonation()">Submit</button>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-</div>
+                                  <div class="card_donate d-flex gap-2 mb-2" id="card_donate_1">
+                                    <img src="{% static 'images/home/cement.png'  %}" class="card-img-top img-fluid" alt="cement Seva">
+                                    <div class="card-body d-flex flex-row gap-2">
+                                        <div>
+                                          <h5 class="card-title fw-bold">Cement Seva</h5>
+                                          <p class="card-text f-12"> A reliable sanctuary for abandoned cows. Join us in constructing their haven with sturdy structures, providing shelter and care to these gentle beings.</p>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <div class="add_button">
+                                                <button class="btn btn-primary f-12 add-button">Add +</button>
+                                            </div>
+                                            <div class="quantity-container" style="display: none;">
+                                                <button class="btn btn-primary f-14 decrement-btn">-</button>
+                                                <span class="mx-2 quantity-value">0</span>
+                                                <button class="btn btn-primary f-14 increment-btn">+</button>
+                                                <button class="btn btn-primary interBtn enter-button">Enter</button>
+                                            </div>
+                                            <div class="added-button" style="display: none;">
+                                                <button class="btn btn-primary f-12 bg-dark text-white">
+                                                    Added 
+                                                    <img src="{% static 'images/home/done_all.png'  %}" class="card-img-top img-fluid" style="width:auto; height:16px" alt="done">
+                                                </button>
+                                            </div>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="card_donate d-flex gap-2 mb-2" id="card_donate_1">
+                                    <img src="{% static 'images/home/aggregate.png'  %}" class="card-img-top img-fluid" alt="Aggregate Seva">
+                                    <div class="card-body d-flex flex-row gap-2">
+                                        <div>
+                                          <h5 class="card-title fw-bold">Aggregate Seva</h5>
+                                          <p class="card-text f-12">  A reliable sanctuary for abandoned cows. Join us in constructing their haven with sturdy structures, providing shelter and care to these gentle beings.</p>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <div class="add_button">
+                                                <button class="btn btn-primary f-12 add-button">Add +</button>
+                                            </div>
+                                            <div class="quantity-container" style="display: none;">
+                                                <button class="btn btn-primary f-14 decrement-btn">-</button>
+                                                <span class="mx-2 quantity-value">0</span>
+                                                <button class="btn btn-primary f-14 increment-btn">+</button>
+                                                <button class="btn btn-primary interBtn enter-button">Enter</button>
+                                            </div>
+                                            <div class="added-button" style="display: none;">
+                                                <button class="btn btn-primary f-12 bg-dark text-white">
+                                                    Added 
+                                                    <img src="assets/images/home/done_all.png'  %}" class="card-img-top img-fluid" style="width:auto; height:16px" alt="done">
+                                                </button>
+                                            </div>
+                                            <p class="card-text f-18 fw-semibold">₹100</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-5 mt-2 mt-lg-0">
+                                    <div class="card_donate fw-medium zIndex-3 position-relative">
+                                      <p class="mb-1 f-14">
+                                          By supporting <span class="color-26 fw-bold">Hingonia</span>, you are helping us reach out to more campaigns like this and scale our impact. <a href="#" class="color-26 text-decoration-underline fw-bold">Learn More.</a>
+                                      </p>
+                                      <div class="d-flex justify-content-between">
+                                          <span class="f-12 fw-bold">Support us by :</span>
+                                          <span class="supportPer f-12 fw-bold px-1" style="background:#F5F5F5; border:2px inset #0000001c; border-radius: 5px">
+                                              <select class="h-100">
+                                                <option value="IN">16% (₹160)</option>
+                                                <option value="US">22% (₹200)</option>
+                                              </select>
+                                          </span>
+                                      </div>
+                                    </div>
+                                    <div class="donateForm_wr py-3">
+                                      <form onsubmit="return false">
+                                          <div class="mb-3 position-relative">
+                                            <label for="nameInput" class="form-label position-absolute f-12 fw-medium">Name</label>
+                                            <input type="text" class="form-control" placeholder="Srimaan Nivas" id="nameInput" aria-describedby="nameHelp">
+                                          </div>
+                                          <div class="mb-3 position-relative">
+                                            <label for="emailInput" class="form-label position-absolute f-12 fw-medium">Email</label>
+                                            <input type="text" class="form-control" placeholder="nivaashri@gmail.com" id="emailInput" aria-describedby="emailHelp">
+                                          </div>
+                                          <div class="mb-3 position-relative">
+                                            <div class="position-absolute country_code h-100">
+                                                <select class="h-100">
+                                                  <option value="IN">IN</option>
+                                                  <option value="US">US</option>
+                                                  <option value="UK">UK</option>
+                                                </select>
+                                            </div>
+                                            <label for="nameInput" class="form-label position-absolute f-12 fw-medium">Number</label>
+                                            <input type="text" class="phone-number w-100" placeholder="+91 00000-00000">
+                                            <div class="help-icon position-absolute flexBoxCenter" title="Enter your mobile number including the country code.">?</div>
+                                          </div>
+                                          <div class="donate_CountryBtn d-flex align-items-center">
+                                              <div>
+                                                  <input class="checkBox form-check-input" type="radio" name="nationality" id="nationality">
+                                                  <label class="form-check-label fw-bold" for="nationality">Nationality</label>
+                                              </div>
+                                              <button class="countryBtn active" id="indian-btn">INDIAN</button>
+                                              <button class="countryBtn non_indian" id="non-indian-btn">NOT INDIAN</button>
+                                          </div>
+                                      </form>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex gap-3 mt-2">
+                                      <div class="custom_amount flexBoxCenter">
+                                          <div class="title fw-bold">Custom Amount:</div>
+                                          <div class="amount">
+                                            <input id="number" type="text" />
+                                          </div>
+                                      </div>
+                                      <div class="currency">
+                                          <span class="f-14 fw-semibold">Currency</span>
+                                          <div class="inrSelect">
+                                            <select class="h-100">
+                                                <option value="IN">INR</option>
+                                                <option value="US">USD</option>
+                                                <option value="UK">$</option>
+                                            </select>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 pt-1">
+                                    <div class="d-flex align-items-center messageBox gap-2">
+                                      <input type="checkbox" class="donationMessage position-relative" id="anonymous">
+                                      <label class="f-14 m-0 py-1 form-check-label" for="anonymous">
+                                        Make my Donation Anonymous
+                                      </label>
+                                    </div>
+                                    <div class="d-flex align-items-center messageBox gap-2">
+                                        <input type="checkbox" class="donationMessage position-relative"  id="whatsapp">
+                                        <label class="f-14 m-0 py-1 form-check-label" for="whatsapp">
+                                          I want to receive transaction and donation updates on WhatsApp
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 pt-1">
+                                    <div class=" messageBox">
+                                      <div class="d-flex align-items-center gap-2">
+                                        <input type="checkbox" class="donationMessage gap-2 position-relative"  id="request2">
+                                        <label class="f-14 m-0 py-1 form-check-label" for="request2">
+                                          Request 80 G
+                                        </label>
+                                      </div>
+                                      <div class="monthly_donate d-flex align-items-center">
+                                          <div class="monthly d-flex align-items-center justify-content-between">
+                                            <button class="btn messageBox flexBoxCenter gap-2 fw-bold">
+                                              <input type="checkbox" class="md_btn donationMessage position-relative"  id="donateMOnthly">
+                                              <label class="f-14 m-0 py-1 form-check-label" for="donateMOnthly">
+                                                Donate Monthly
+                                              </label>
+                                            </button>
+                                            <div class="d-flex flex-column align-items-end">
+                                                <span class="f-14 fw-bold">TOTAL AMOUNT</span>
+                                                <span class="f-27 color-12 fw-bold" style="line-height:normal">RS. 1,160</span>
+                                            </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="dSubmit pt-2">
+                                      <button class="btn btnPink fw-bold btnAnimation">DONATE NOW</button>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="knowMore_donateModel">
+              <div class="modal fade" id="knowMoredonate1"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="knowMoredonate1Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title fw-bold w-100 f-24">Feeding Cows</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="learnMore_donate" id="learnMoreSlide">
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="social_wr d-flex gap-1 flex-wrap">
+                                  <div class="facebook ">
+                                    <a href="#" class="py-2 px-3 fw-bold f-14">Facebook</a href="#">
+                                  </div>
+                                  <div class="instagram ">
+                                    <a href="#" class="py-2 px-3 fw-bold f-14">Instagram</a href="#">
+                                  </div>
+                                  <div class="whatsapp ">
+                                    <a href="#" class="py-2 px-3 fw-bold f-14">Whatsapp</a href="#">
+                                  </div>
+                                  <div class="twitter ">
+                                    <a href="#" class="py-2 px-3 fw-bold f-14">Twitter</a href="#">
+                                  </div>
+                              </div>
+                              <h4 class="display-5 color-27 fw-semibold">Donor Privileges</h4>
+                              <div class="pt-3 pt-lg-0">
+                                <ol class="f-14 fw-medium">
+                                  <li class=" color-27 lineHeight-30">
+                                    Gau Puja on your name
+                                  </li>
+                                  <li class=" color-27 lineHeight-30">
+                                    Digital Certificate of Your Goseva Contribution
+                                  </li>
+                                  <li class=" color-27 lineHeight-30">
+                                    80G Tax Exemption Certificate
+                                  </li>
+                                  <li class=" color-27 lineHeight-30">
+                                    On donating 11000 & above you will get 100% Pure Products from our gaushala.
+                                  </li>
+                                </ol>
+                              </div>
+                              <div>
+                                <div class="share text-center mb-2">
+                                  <div class=" share_btn flexBoxCenter d-inline-block">
+                                    <button class="btn p-2">
+                                      <img class="img-fluid width-20" src="assets/images/home/share.png'  %}" alt="share">
+                                      <span class=" color-27 fw-semibold">Share</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="desc_wr">
+                                  <h6 class="fw-semibold">Cows in Divine Protection</h6>
+                                  <p>
+                                    In the lore of Krishna, cows symbolize purity and abundance, receiving divine protection. Their care is integral to sustaining balance and harmony in the cosmic order, reflecting Krishna's compassionate guardianship.
+                                  </p>
+                                  <button class="btnAnimation">
+                                    <img class="img-fluid width-20 me-1" src="assets/images/home/favorite.png'  %}" alt="favorite">
+                                    Donate
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
            <!-- Modal 1 -->
 
             <!-- Modal 2 -->
@@ -1476,32 +1939,3 @@
       </section>
        
   {% include 'footer.html' %}
-
-  <script>
-    const donateUrlTemplate = "{% url 'donate' 0 %}";  // Using '0' as a placeholder
-
-    function openDonateModal(categoryId) {
-        const csrfToken = "{{ csrf_token }}";
-        const url = donateUrlTemplate.replace('0', categoryId);  
-        
-        const formData = new FormData();
-        formData.append("csrfmiddlewaretoken", csrfToken);
-        
-        fetch(url, {
-            method: "POST",
-            headers: {
-                "X-CSRFToken": csrfToken
-            },
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Handle the response from the server
-            console.log(data);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    }
-</script>
-
