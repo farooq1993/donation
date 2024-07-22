@@ -1,10 +1,11 @@
 from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from django.contrib.auth import login
+from django.core.exceptions import ValidationError
 from django.contrib.auth.decorators import login_required
 from .models import *
 from .forms import *
+from .utils.validation import validate_image_format, validate_image_size
 import os 
 import logging
 from django.conf import settings
@@ -34,6 +35,12 @@ def herosection(request):
             image_paths = []
 
             for file in files:
+                try:
+                    validate_image_format(file)
+                    validate_image_size(file)
+                except ValidationError as e:
+                    form.add_error('img', e)
+                    return render(request, 'herosection.html', {'form': form})
                 filename = file.name
                 file_path = os.path.join(settings.MEDIA_ROOT, filename)
                 
@@ -54,6 +61,14 @@ def herosection(request):
             return redirect('dashboard')  # Redirect after successful upload
 
     return render(request, 'herosection.html')
+
+
+#Get Herosection Data
+@login_required(login_url='/login')
+def herosection_data(request):
+    data = HeroSectionContent.objects.all()
+    context={'data':data}
+    return render(request, 'herosecdata.html',context)
 
 
 

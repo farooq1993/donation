@@ -1,12 +1,13 @@
 from django.db import models
 from django.utils.text import slugify
+from .utils.validation import validate_image_format, validate_image_size
 from django.conf import settings
 
 # Create your models here.
 
 class HeroSectionContent(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    img = models.FileField(upload_to='media/')
+    img = models.FileField(upload_to='media/', validators=[validate_image_format, validate_image_size])
     images = models.JSONField(null=True, blank=True)  # Store image paths as JSON
     title =  models.CharField(max_length=250, null=True, blank=True)
     youtube_link = models.CharField(max_length=250, null=True, blank=True)

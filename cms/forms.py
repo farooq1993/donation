@@ -1,11 +1,17 @@
 from django import forms
 from .models import *
 from users.models import User
-
+from .utils.validation import validate_image_format, validate_image_size
 class HerosectionForm(forms.ModelForm):
     class Meta:
         model = HeroSectionContent
-        fields = ['title'] 
+        fields = ['img', 'images', 'title'] 
+    
+    def clean_img(self):
+        img = self.cleaned_data.get('img')
+        validate_image_format(img)
+        validate_image_size(img)
+        return img
 
 
 #Add category Form

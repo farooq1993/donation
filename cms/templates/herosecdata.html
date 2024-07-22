@@ -1,0 +1,57 @@
+{% load static %}
+
+<title>{% block title%} Herosection Data {% endblock %}</title>
+<body>
+    <div class="topbar">
+
+        <!-- LOGO -->
+        <div class="topbar-left">
+            <a href="{% url 'dashboard' %}" class="logo">
+                <span class="logo-light">
+                        <i class="mdi mdi-camera-control"></i> Hingonia
+                    </span>
+                <span class="logo-sm">
+                        <i class="mdi mdi-camera-control"></i>
+                    </span>
+            </a>
+        </div>
+
+        {% include 'menu.html' %}
+
+    <h2 class="text-center text-white">Hero Section Data</h2>
+
+    <section>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Images</th>
+                    <th scope="col">Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if data %}
+                    {% for item in data %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>{{ item.title }}</td>
+                            <td>
+                                {% if item.images %}
+                                    {% for image_path in item.images %}
+                                        <img class="img" src="{{ image_path }}" alt="Image" height="70px" width="50">
+                                    {% endfor %}
+                                {% endif %}
+                            </td>
+                            <td>@{{ item.user.username }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="4">No data available.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </section>
+</body>
