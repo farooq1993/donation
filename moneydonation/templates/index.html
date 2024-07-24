@@ -1,6 +1,6 @@
 {% include 'header.html' %}
 {% load static %}
-  
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <body>
     <!-- <?php require_once( 'includes/nav.php'); ?> -->
     {% include 'nav.html' %}
@@ -142,36 +142,27 @@
             </div>
             <div class="col-lg-7 col-md-12 p-0 order-lg-2 order-1">
               <div class="swiper bannerSwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    {% if data %}
-                    <!-- <p>{{item.img_bio}}</p> -->
-                        {% for image in data.image_list %}
-                            <div class="col-lg-3 col-md-4 col-sm-6 px-1 pb-2">
-                                <div class="gallery_img text-center">
-                                    <img class="img-fluid" src="{{ image }}" alt="gallery-image">
-                                </div>
-                            </div>
-                        {% endfor %}
-
-                        {% else %}
-                        <p>No content available</p>
-                    {% endif %}
-                  <!-- <div class="swiper-slide">
-                    <img src="{% static 'images/home/slider-01.jpg' %}" alt="">
+                  <div class="swiper-wrapper">
+                      {% for content in hero_contents %}
+                          {% if content.images %}
+                              {% for image in content.images %}
+                                  <div class="swiper-slide text-center">
+                                      <img src="{{ image }}" alt="gallery-image">
+                                  </div>
+                              {% endfor %}
+                          {% else %}
+                              <div class="swiper-slide">
+                                  <p>No content available</p>
+                              </div>
+                          {% endif %}
+                      {% endfor %}
                   </div>
-                  <div class="swiper-slide">
-                    <img src="{% static 'images/home/slider-01.jpg' %}" alt="">
-                  </div> -->
-                </div>
-                <!-- <div class="swiper-button-next">
-                </div>
-                <div class="swiper-button-prev">
-                </div> -->
+                  <!-- Add Arrows -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
               </div>
-            </div>
           </div>
-        </div>
+      
       </section>
       <section class="bg-black py-3 mx-2 home-section-2">
         <div class="container-fluid">
@@ -1476,7 +1467,8 @@
       </section>
        
   {% include 'footer.html' %}
-
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     const donateUrlTemplate = "{% url 'donate' 0 %}";  // Using '0' as a placeholder
 
@@ -1503,5 +1495,18 @@
             console.error('Error:', error);
         });
     }
+
+  document.addEventListener('DOMContentLoaded', function () {
+          var swiper = new Swiper('.bannerSwiper', {
+              navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+              },
+              loop: true,
+              slidesPerView: 1,
+              spaceBetween: 10,
+              // Add any other configurations you need
+          });
+      });
 </script>
 

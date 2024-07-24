@@ -11,6 +11,12 @@ class HeroSectionContent(models.Model):
     images = models.JSONField(null=True, blank=True)  # Store image paths as JSON
     title =  models.CharField(max_length=250, null=True, blank=True)
     youtube_link = models.CharField(max_length=250, null=True, blank=True)
+    stray_abandoned_cows = models.BigIntegerField()
+    surgeries_done = models.BigIntegerField()
+    cow_sheds = models.BigIntegerField()
+    go_shevak = models.BigIntegerField()
+    doctors_nursing_staff= models.BigIntegerField()
+    tractors_loaders = models.BigIntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
