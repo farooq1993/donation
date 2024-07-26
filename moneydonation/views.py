@@ -59,10 +59,6 @@ def UploadImgGallery(request):
 
     return render(request, 'upload_gallery.html', {'form': form, 'user':user})
 
-# def get_gallery_data(request):
-#     data = UploadMedia.objects.all()
-#     return render(request, 'get_gallery.html', {'data': data})
-
 
 #show our work 
 def our_work(request):
@@ -89,9 +85,8 @@ def about(request):
 #Gallery
 def gallery(request):
     try:
-        upload_media_objects  = UploadMedia.objects.all()
-        images_list = [image for media in upload_media_objects if media.images for image in media.images]
-        return render(request, 'gallery.html',{"data":images_list})
+        data = UploadMedia.objects.all()
+        return render(request, 'gallery.html',{"data":data})
     except:
         return JsonResponse({"msg":"page not found"})
     
